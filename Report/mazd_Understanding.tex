@@ -1,0 +1,575 @@
+In this Chapter we will go towards a deeper understanding of the map $f$
+and the deterministic chaos it gives rise to.
+%-----------------------------------------------------------------------
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/faigengeneral1.png}
+    \caption{The Logistic Map Sec.~\ref{appendix:logicmap}. The values $f$ converges to, against Growth Rate $\mu$.
+    Equilibrium achieved with 20'000 iterations}
+    \label{fig:feigen1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/feigen3.png}
+    \caption{Close up of the Logistic Map Fig.(\ref{fig:feigen1}) and illustration of
+            Eq.(\ref{eq:ratio})}
+    \label{fig:feigen2}
+\end{figure}
+
+When discussing a 1D map such as $f$, the Logistic Map (Fig.\ref{fig:feigen1}) presents 
+the systems behaviour in the most intuitive way. At first converging 
+to 0 and then to a positive number. At $\mu = 3$, the first bifurcation 
+occurs - the system now oscillates between two stable states. As $\mu$
+grows the number of those states becomes 4, 8, 16, 32, 64, 128, 256, ...,
+until at $\mu \approx 3.570$, $f$ no longer converges and becomes
+transitive. It is not unreasonable to ask: \textit{"Is the chaos we
+observe just not the system having an very large number of stable states?"}.
+The answer to that is a definite \textbf{No}. The difference is that 
+a system with a large amount of stable states will only oscillate around those states,
+while a transitive system will generate any value in the co-domain of the map
+given enough iterations. What this means for us is that for a real life system described by 
+a chaotic map, we cannot guess at its state out of the hypothetical $2^n$ states available,
+as every state is a possible state and thus guessing becomes meaningless.
+\section{Feigenbaum's number}
+
+There is a peculiar order leading up to the point of chaos ($\mu \approx 3.570$).
+Let us define the number of bifurcations with $k$, so that at $k=1$, the number of
+'branches' or \textbf{Period} $= 2$.\\
+Thus at $k = (2,\;3,\;4,\;k)$ the Period $= (4,\;8,\;16,\;2^k)$.
+If we were to take the length of a branch (A) and divide by the length
+of the branch that begins from our initial one (B) we would observe that there is 
+a ratio which hold regardless of which pair we choose. That is to say, the system
+ is asymptotically periodic. This is illustrated in fig.\ref{fig:feigen2}.
+
+\begin{equation}
+    \label{eq:ratio}
+    Ratio\; \; \delta_k\;=\; \frac{\mu_{k+1}\;-\;\mu_{k}}{\mu_{k+2}\;-\;\mu_{k+1}}
+\end{equation}
+
+This ratio is known as Feigenbaums constant and is represented by $\delta$. There
+are several different versions of $\delta$, depending on the dimension of the map,
+however in this work we will focus solely on the 1D case. Feigenbaum also has a 
+constant signified by $\alpha$ which has to do with the width of the branches.
+In his paper from 1978 for the Journal of Statistical Physics \cite{feigenbaumconstant} he obtained 
+$\delta = 4.669201609103...$. This number was later improved upon to 84 places by Briggs (1991) \cite{briggsconstant}
+and again to 576 places in (1997) \cite{briggsconstant2}. Two years later Broadhurst, in an email to his friend,
+defined it to 1018 places \cite{Broadhurst}.\\
+
+Obtaining a value of our own will be the subject of the few following sections.
+There are several methods one can approach this. One being simply plotting the 
+Logistic Map or generating a list of the values and measuring the distance between
+bifurcations. This was the method utilised by the author in the early stages of this
+project, alas it is severely limited in precision due to the constraints of computer
+arithmetic. The best value obtained, $\delta\; =\; 4.920$ is only a vague suggestion towards the true ratio.\\
+Another method, the one utilised by Feigenbaum \cite{feigenbaumconstant}, is using
+power series approximations. Below we will explore in detail a variety of different
+approaches to this problem and compare results. Should the reader wish to cut to the
+most accurate method, skip to the Direct Method as devised by Briggs in 1989 \cite{briggspc}.
+
+\subsection{Looking at the Figure}
+This is perhaps the least sophisticated approach. We take Fig.\ref{fig:feigen1} and
+look at it really hard. Alas as we magnify the bifurcation points to pinpoint
+exactly where they begin, a complication arises. As seen in Fig.(\ref{fig:trans1})
+we cannot correctly determine where the branch begins due to two limitations imposed
+by the capabilities of the machine and time. The first being the impossibility to fully
+converge each system. A system is $f^n$ iterating continuously at a specific Growth Rate $\mu$.
+The system will converge at $n \to \infty$ which is not obtainable.
+The second limitation is the limitation on sample size. A sample is the number of different 
+values of $\mu$ for which $f$ is iterated. If we desire a large sample size in order for
+points to be denser, we limit ourselves in terms of the number of iterations $n$ we have
+time to compute. As each system must go through the same number of iterations as the rest,
+increasing the systems quantity lengthens computation time.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/feigen4.png}
+    \caption{Close up of Fig.(\ref{fig:feigen1}), vertical space between the points
+            is due to the system not fully converging, horizontally the data is distanced
+            due to the finite number of samples in the region $\mu \in [0,\;4]$.}
+    \label{fig:feigen3}
+\end{figure}
+
+Regardless with an attempt to reasonably balance sample size and iteration length we
+plot Fig.(\ref{fig:feigen1}) in detail and to the best of our abilities the following data
+is extracted:
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[h]
+\centering
+\resizebox{0.6\textwidth}{!}{%
+\begin{tabular}{@{}ccccc@{}}
+\toprule
+$k$ & Branches $=2^k$ & $\mu_k$ & Difference $\mu_k - \mu_{k-1}$ & Ratio $\delta_k$ \\ \midrule
+0   & 1               & 0       & -                              & -                \\
+1   & 2               & 2.99975 & 2.99975                        & -                \\
+2   & 4               & 3.44938 & 0.44963                        & 6.671597         \\
+3   & 8               & 3.54076 & 0.09138                        & \textbf{4.920442}         \\
+4   & 16              & 3.56439 & 0.02363                        & 3.867118         \\
+5   & 32              & 3.56876 & 0.00437                        & 5.407323         \\ \bottomrule
+\end{tabular}%
+}
+\caption{The ratio $\delta_k$ as estimated from data gathered by measuring the distance between points in Fig.(\ref{fig:feigen1}). Best estimation is
+4.920 which hint towards the true value of 4.669.}
+\label{tab:feigentable1}
+\end{table}
+
+While it is possible to overcome some of these obstacles by only generating samples over
+the areas of interest, the true ratio $\delta$ is achieved by computing the ratio between
+bifurcation points separated by infinitesimally small distances; Eq.(\ref{eq:trueratio}).
+The above statement implies that there is a very harsh limit to the achievable precision
+of this method.
+
+\begin{equation}
+    \label{eq:trueratio}
+    \delta\; = \; \lim_{k \to \infty} \delta_k
+\end{equation}
+
+\subsection{The Fixed Point Analysis Method}
+
+This method resolves the issue of limited precision the previous approach has
+by mathematically obtaining the exact position at which the bifurcation occurs
+instead of converging a system towards it. Fixed points reside within a single
+state, not changing upon application of a map \cite{chaosatwolfram2};
+Eq.(\ref{eq:Fixed point}).
+
+\begin{equation}
+    \label{eq:Fixed point}
+    f^n(x) = x 
+\end{equation}
+
+The first stable point in the Logistic Map can be determined by Eq.(\ref{eq:Fixed point 0}).
+
+\begin{equation}
+    \label{eq:Fixed point 0}
+    f^1(x_0) = x_0
+\end{equation}
+
+\begin{equation}
+    \mu\,x_0\,(1-x_0)\;=\;x_0
+\end{equation}
+\begin{equation}
+    \mu\,x_0\,(1-x_0)\,-\,x_0 \;=\;0
+\end{equation}
+\begin{equation}
+    \mu\,x_0\,\left(x_0 - \left(\frac{1-\mu}{\mu}\right)\right)\;=\;0
+\end{equation}
+
+The solutions to this equation, $x_0 = 0$ and $x_0 = (1-\mu)/\mu$ are the 1-st order
+Fixed points. The values of $\mu$ at which the stable points occur can be computed by
+solving the discriminant for $\mu$. The equations below were evaluated using
+Wolfram Mathematica v12.0.
+
+\begin{equation}
+Discriminant[x_0,\;\mu]
+\end{equation}
+\begin{equation}
+Discriminant[0,\;\mu]\;=\;0
+\end{equation}
+\begin{equation}
+Discriminant[(\mu-1)/\mu,\;\mu]\;=\;1
+\end{equation}
+
+Our 1-st order Fixed Points occur at $\mu = 0,\;1$. At this order no bifurcations
+have developed. To determine the point at which the Logistic Map experiences its first
+doubling we would have to solve $f^2(x_0) = x_0$.
+
+\begin{equation}
+\mu\,x_1\,(1-x_1)\;=\;x_0
+\end{equation}
+\begin{equation}
+\mu\,(\mu\,x_0\,(1-x_0))\,(1-(\mu\,x_0\,(1-x_0)))\;=\;x_0
+\end{equation}
+\begin{equation}
+\mu\,(\mu\,x_0\,(1-x_0))\,(1-(\mu\,x_0\,(1-x_0)))-x_0\;=\;0
+\end{equation}
+
+There are four solution's to this equation:
+
+\begin{equation}
+x_0\;=\; 0
+\end{equation}
+\begin{equation}
+x_0\;=\; (1-\mu)/\mu
+\end{equation}
+\begin{equation}
+x_0\;=\; \frac{\mu + \mu^2 \pm \mu \sqrt{-3 - 2 \mu + \mu^2}}{2 \mu^2}
+\end{equation}
+
+As the 2-nd order system is an iteration of the 1-st, $f(f^1(x_0))=x_0$, its solutions
+include those for the 1-st order system. The last two solutions will only be real if the root is 0 or positive,
+therefore we can simply solve the discriminant of what is inside it:
+
+\begin{equation}
+Discriminant[-3 - 2 \mu + \mu^2,\;\mu]\;=\;3
+\end{equation}
+
+$\mu = 3$ is therefore the point where the 1-st period doubling originates. From this point on
+equations rapidly increase in size and the author will display only enough to prove his point.
+We will not be solving the 3-rd order system as the solutions to that one belong to a map of higher
+dimension. An oversimplified way of figuring out which order systems are of interest is that a 2-nd order
+system reveals where the Logistic Map bifurcates into a total of 2 branches. A 4-th order system reveals the start
+of 4 branches, 8-th order: of 8, etc. Without further delay we attempt to find our next period doubling point:
+$f^4(x_0) = x_0$.
+
+\begin{equation}
+\mu\,x_3\,(1-x_3)\;=\;x_0
+\end{equation}
+\begin{equation}
+(\mu (1 - x_0) x_0)((\mu (1 - x_0) x_0)((\mu (1 - x_0) x_0)((\mu (1 - x_0) x_0)(x_0))))-x_0\;=\;0
+\end{equation}
+
+There are 16 solutions to this, four of which are the solutions for the
+1-st and 2-nd order system. The rest are roots to different powers, the contents of which are identical.
+
+\begin{equation}
+x_0\;=\sqrt{\left(\;1 + \mu^2 + ... +(-\mu^9 - 15 \mu^11 - 20 \mu^12) x_0^9 + (3 \mu^11 + 
+    15 \mu^12) x_0^10 - 6 \mu^12 x_0^11 + \mu^12 x_0^12\right)}
+\end{equation}
+
+This solution is not as straightforward as the previous ones as it is dependent on $x_0$.
+Setting whats inside the square root equal to 0 and solving once again for $x_0$ however gives us
+the desired expressing in terms of $\mu$:
+
+\begin{equation}
+x_0\;=\;1037970703125 \mu^132 + ... + \mu^172
+\end{equation}
+
+At this point we have nearly made it. We divide all 36 terms by $\mu^{132}$ which is the one with to the smallest power.
+
+\begin{equation}
+\frac{(-5 - 2 \mu + \mu^2)^2 (5 - 4 \mu + 6 \mu^2 - 4 \mu^3 + \mu^4)^3 (-135 - 54 \mu - 
+   9 \mu^2 + 28 \mu^3 + 3 \mu^4 - 6 \mu^5 + \mu^6)^4}{\mu^{132}}
+\end{equation}
+
+We take the discriminant of the numerator as that is what interests us:
+
+\begin{equation}
+Discriminant[(-5 - 2 \mu +......+ \mu^6)^4,\;\mu]\;=\;1+\sqrt{6}\;=\;3.4495, 
+\end{equation}
+
+There are multiple other solutions to the Discriminant, however most are not of interest to us
+as they are either imaginary, or negative. There are two legitimate solutions, the one above and
+$\mu = 3.9601$ which is the start of 4 branches at the end of one of the islands of non-chaotic behaviour
+as seen in Fig.(\ref{fig:feigen2}).
+
+\paragraph{}
+
+Unfortunately we have hit yet another roadblock. The next Fixed point at $f^8(x_0) = x_0$ has
+256 ($2^8$) solutions for $x_0$ meaning that many of the polynomials will be above 200-th order.
+The author believes computation time for the above to range between several hours to a few days depending on 
+the machine its being solved on. One thing is certain and it is that this method is no longer viable.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[h]
+\centering
+\resizebox{0.6\textwidth}{!}{%
+\begin{tabular}{@{}cccccc@{}}
+\toprule
+Order of fixed point & $k$ & Branches $=2^k$ & $\mu_k$ & Difference $\mu_k - \mu_{k-1}$ & Ratio $\delta_k$ \\ \midrule
+1                    & 0   & 1               & 0       & -                              & -                \\
+2                    & 1   & 2               & 3       & 3                              & -                \\
+4                    & 2   & 4               & 3.44949 & 0.44994                        & 6.674            \\ \bottomrule
+\end{tabular}%
+}
+\caption{The ratio $\delta_k$ as estimated from data gathered by computing fixed points}
+\label{tab:feigentable2}
+\end{table}
+
+While we have figured out the points to considerable accuracy, they are so early in the series that the only
+ratio $\delta = 6.674$ we are able to obtain is far from the true value.
+
+\subsection{The Direct Method}
+
+In the family of functions $f:\; X\to X$, so far we have been looking strictly at the map
+$f^{n+1}(x_n) = \mu x_n (1 - x_n)$. There are however maps with equivalent properties and to make things
+easier for ourselves we will be using one of them for this method rather than the one studied up to this point.
+The reason this map is simpler is that its derivative $\partial / \partial \mu$, has an independent constant allowing
+us to set variables to 0.\\
+The map in question is:
+
+\begin{equation}
+    h^{n+1}(x_n) = \mu - x_n^2
+\end{equation}
+
+Similarly to how we proved our map is dense in X in Par.\textbf{2.2} we will utilise those techniques
+to study the parameters of the new system.The domain of $X$ is
+
+\begin{equation}
+\{x \in \mathbb{R} \; \mid \;  -2 \leq x \leq 2 \}
+\end{equation}
+
+Max($h^{n+1}(x_n)$) lies at $x_n = 0$
+
+\begin{equation}
+\frac{h^{n+1}(x_n)}{x_n} = - 2 x_n = 0 
+\end{equation}
+
+From Eq.(\ref{eq:hofmu}) we conclude that the range of the Growth Rate is $\mu \in [0,\;2]$
+
+\begin{equation}
+    \label{eq:hofmu}
+    Max(h^{n+1}(x_n)) = 2 = \mu - 0^2 = \mu 
+\end{equation}
+
+We now push the following notion: Let $\mu_k^i$ be a point at which the $i^{th}$ period doubling has occurred:
+the system has stabilised into $2^i$ branches. Further let us define a super-stable point $\mu^i$ as the exact value
+at which the $2^i$ branches occur. We can think of the points we obtained in Sec.~(\textbf{3.1.2}) as super-stable.
+Furthermore we define Feigenbaums constants true value as Eq.(\ref{eq:trueself}).
+
+\begin{equation}
+    \label{eq:trueself}
+    \delta = \lim_{i \to \infty} \left( \frac{\mu^{i-1}-\mu^{i-2}}{\mu^{i}-\mu^{i-1}} = \delta^i \right)
+\end{equation}
+
+\begin{equation}
+    \label{eq:trueself2}
+    \delta^i = \lim_{k \to \infty} \left( \frac{\mu_{k-1}^{i}-\mu_{k-2}^{i}}{\mu_{k}^{i}-\mu_{k-2}^{i}} = \delta_k \right)
+\end{equation}
+
+What we are doing is we are taking some points $\mu_k^i$ at which we are certain a period doubling has already occurred
+then we iterate polynomials which are stable at 0, similarly to our approach in the previous section. The difference
+being that in our previous approach we stabilised the polynomial by equating to 0 and attempted to obtain the exact position
+with "one" calculation. While with this method we approach $\mu^i$ from some stable point between $\mu^i$ and $\mu^{i+1}$; \cite{briggspc}.
+\paragraph{}
+Polynomials are iterated similarly to $h$, however they are a function of $\mu$.
+
+\begin{equation}
+p_k(\mu) = \mu - [p_{k-1}(\mu)]^2
+\end{equation}
+\begin{equation}
+p_0(\mu) = 0 
+\end{equation}
+
+Iff $p_k(\mu) = 0$, $h_{\mu}$ has a super-stable point from which $2^k$ branches originate.\\
+Rearranging Eq.(\ref{eq:trueself2}) we obtain an equation for $\mu_k$:
+
+\begin{equation}
+    \label{eq:trueself3}
+    \mu^{i} = \mu^{i-1} + \frac{ \mu^{i-1} -\mu^{i-2}}{\delta^i}  
+\end{equation}
+
+\begin{equation}
+    \label{eq:trueself4}
+    \mu_{k+1}^{i} = \mu_{k}^{i} + \frac{ p_{k}(\mu_{k}^{i}) }{ p_{k}'(\mu_{k}^{i})}  
+\end{equation}
+
+\begin{equation}
+    \label{eq:trueself5}
+    p_{k}'(\mu_{k}^{i}) =  \frac{\partial \left( p_{k}(\mu_{k}^{i})\right)}{\partial \mu} = 1 - 2\, p_{k-1}'\, p_{k-1}
+\end{equation}
+
+\begin{equation}
+    \label{eq:trueself6}
+    \mu^i = \lim_{k \to \infty} \mu_k^i
+\end{equation}
+
+Applying the above with Eq.(\ref{eq:trueself}) allows us to obtain Feigenbaums constant with increasing accuracy.
+Eq.(\ref{eq:trueself3}) estimates the position of the $i^{th}$ super-stable point. Then the value of that point is refined
+by iterating Eq.(\ref{eq:trueself4}), where the derivative of the polynomial with respect to $\mu$ is defined in Eq.(\ref{eq:trueself5}).
+Before we attempt to estimate the following super-stable point, a new improved estimate for $\delta$ is obtained through Eq.(\ref{eq:trueself}),
+allowing the next super-stable point to be obtained to greater accuracy. The whole process seems to increase precision linearly with 
+every two iteration producing another true digit \cite{rosetacode}.
+
+\newpage
+\subsubsection{The Code}
+
+\begin{lstlisting}[language=Python, caption=Code approximating Feigenbaums constant]
+mu1 = 1.0           # This is Growth rate mu^(i-1)
+mu2 = 0.0           # mu^(i-2)
+f = 4.92           # Best approx. of Feigenbaums constant
+
+for i in range(2, max_it + 1):
+    mu = mu1 + (mu1 - mu2) / f   # mu is mu^(i)
+    for k in range(1, max_it_k + 1):
+        p = 0.0
+        dp = 0.0
+        for n in range(1, (1 << i) + 1):
+            dp = 1.0 - 2.0 * dp * p
+            p = mu - p**2
+        mu = mu - p / dp
+    f = (mu1 - mu2) / (mu - mu1)
+
+    mu2 = mu1
+    mu1 = muue. 
+\end{lstlisting}
+
+The Code utilizes the method developed by Briggs \cite{briggspc}, and its core is inspired by an anonymous contributor at
+RosetaCode.org \cite{rosetacode}.\\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/feigen5.png}
+    \caption{Branch Plot of the continuous map $f^{n+1}(x_n) = \mu - x_n^2$ belonging to the family $f:\; X\to X$}
+    \label{fig:feigen5}
+\end{figure}
+
+On lines \texttt{1} and \texttt{2} we define the first two bifurcation points: $\mu^{i-2 = 0} = 0$ and $\mu^{i-1 = 1} = 1$.
+$\mu^{0} = 0$ is trivial, however notice that $\mu^{1} = 1$ is a rough estimate. From Fig.(\ref{fig:feigen5}) we see
+that the first period doubling beings at $\mu^1 \approx 0.75$ region, however we want to choose a stable point between
+$\mu^{1}$ and $\mu^{2}$, thus we set $\mu^{1} = 1$.\\
+As we enter the first \texttt{for} cycle, we solve Eq.(\ref{eq:trueself3}) on line \texttt{6}. Using this newly obtained
+estimate for $\mu^3$ we iterate Eq.(\ref{eq:trueself4}) which results in $\mu^3$ converging towards its true value as
+per Eq.(\ref{eq:trueself6}). Now that we have obtained a good estimate for our first three values for $\mu$ we reevaluate
+the Feigenbaum constant on line \texttt{14}. Before we begin the process anew all values for mu get shifted to the right:
+$\mu^{i-2} = \mu^{i-1}$, $\mu^{i-1} = \mu^{i}$. This method is mostly limited by the precision of the calculations. Without
+additional improvements to the code, meaning 16 digits of accuracy with Python, one begins diverging from the Feigenbaum
+constant after roughly 15 \texttt{i} iterations. This is of course dependant on the number of iterations we choose to 
+complete for \texttt{k}, however it itself requires digits of precision. Overall there are many ways one can manipulate the
+code to obtain better results, if one is ready to wait during the increased computation time. Sec.~\ref{appendix:feigenconst}
+
+\subsubsection{Feigenbaums Constant - The Closest Estimate}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[h]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{tabular}{@{}ccc@{}}
+\toprule
+\textbf{\texttt{i}} & \textbf{$\delta$}   & \textbf{Correct Digits} \\ \midrule
+1                   & 4.92000000          & 1                       \\
+2                   & 3.21851142          & 0                       \\
+3                   & 4.38567760          & 1                       \\
+4                   & 4.60094928          & 2                       \\
+5                   & 4.65513050          & 2                       \\
+6                   & 4.66611195          & 3                       \\
+7                   & 4.66854858          & 4                       \\
+8                   & 4.66906066          & 4                       \\
+9                   & 4.66917155          & 5                       \\
+10                  & 4.66919515          & 6                       \\
+11                  & 4.66920019          & 6                       \\
+\textbf{12}         & \textbf{4.66920169} & \textbf{8}              \\
+13                  & 4.66920465          & 6                       \\
+14                  & 4.66919371          & 6                       \\
+15                  & 4.66926610          & 5                       \\
+20                  & 4.66847161          & 0                       \\
+True Value          & 4.669201609         & -                       \\\bottomrule
+\end{tabular}%
+}
+\caption{Feigenbaums constant as computed by the Direct Method. Closest estimate obtained is $\delta = 4.66920169$.}
+\label{tab:bestfeigenever}
+\end{table}
+
+The closest estimate we were able to obtain was with our final method: $\delta = 4.6692016$, Table~(\ref{tab:bestfeigenever}). 
+This result has 8 digits of accuracy,
+which includes numbers before the decimal separator. For practical purposes this is a satisfactory result, nevertheless 
+there is allure in searching for higher and higher levels of precision. The author advises one on such a quest to further explore
+the Direct Method as well as read the e-mail by Broadhurst \cite{Broadhurst} as in it he outlines the methodology used to obtain
+his value, considered to be the best estimate to present day with 1018 digits.
+
+\newpage
+\section{Cobweb}
+
+In the next few sections we will be looking to increase are intuition with chaotic systems of this type.
+The next Figure (Fig.~(\ref{fig:cobweb1})) shows a plot with three lines. The blue line is a curve described by some map $f$.
+The map used for Fig.~(\ref{fig:cobweb1}) is the familiar $f^{n+1}(x_n)=\mu x_n (1-x_n)$. Notice the shape recognisable as
+that of a quadratic function. Feigenbaum has shown that all one dimensional maps with a single quadratic maximum bifurcate
+with a period $\delta = 4.669$. \cite{feigenbaumconstant}. Naturally both maps that were explored in this work fit that description.
+The second, amber line is simply an $y=x$ line. The green line appears to be "bouncing" off the previous two. Each line serves as 
+a connection between two points. Disregarding the very first point, which serves to give the system its initial conditions, each point
+lies on either the blue or amber line, alternating with each successive point as described in Eq.(\ref{eq:cobweb1}).
+Sec.~\ref{appendix:cobweb}
+
+\begin{equation}
+    \label{eq:cobweb1}
+    [f(x),\;x] \to [f(x),\;f(x)] \to [f^2(x),\;f(x)] \to [f^2(x),\;f^2(x)] \to [f^3(x),\;f^2(x)] \to etc...
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/cobweb4.png}
+    \caption{Cobweb plot of the map $f^{n+1}(x_n)=\mu x_n (1-x_n)$; $\mu = 3$, $x_0 = 0.2$. On the leftmost figure, successive points are numbered. Both axes 
+    represent some value obtainable by $f(x)$ and their range is the range of the map: $[0,\;1]$.}
+    \label{fig:cobweb1}
+\end{figure}
+
+On the leftmost figure in Fig.~(\ref{fig:cobweb1}) successive points are numbered to highlight the pattern. On its right
+there are figure which illustrate the continuation of the pattern. What we notice is that the points begin to converge.
+Cobweb plots are very useful when it comes to studying the areas where a map converges under certain conditions. In the above
+example, it converges to a single point, although that is not at all necessary. It can converge on two, four, eight or any other number
+(powers of 2 only for this specific map) of values. Below in Fig.~(\ref{fig:cobweb2}) a Cobweb converging on four points can be observed.
+It has been let stabilised over 1500 iterations before any values have been recorded thus making it easier for the reader to see clearly
+the values of convergence.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/cobweb5.png}
+    \caption{Cobweb plot of the map $f^{n+1}(x_n)=\mu x_n (1-x_n)$; $\mu = 3.5$, $x_0 = 0.2$. The system has undergone 1500 iterations before any values
+    being recorded, and is therefore stabilised over 4 points. The reader might find it easier to decipher which those points are
+    by looking solely at the $y=x$ line.}
+    \label{fig:cobweb2}
+\end{figure}
+
+The really interesting thing right now is \textbf{How does a cobweb look for a chaotic system?}. Fig.~(\ref{fig:cobweb3}) shows precisely that.
+On first glance it seems to be exactly what one might expect. From the 32 iterations recorded (after stabilising), 32 produce a unique point.
+If we keep on plotting points however, it becomes obvious there is an order within the chaos. The system follows a specific path and it follows it,
+each time with a small translation. An oversimplified analogy would be if I were to count $1,\;2,\;3,\;4,\;5 \to 1.1,\;2.1,\;3.1,\;4.1,\;5.1
+\to 1.2,\;2.2,\;3.2,\;4.2,\;5.2$ etc. As the system nears its "end" where it would begin converging Fig.~(\ref{fig:cobweb3}) it always escapes
+renewing the cycle, this time a little bit differently than the last.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/cobweb6.png}
+    \caption{Cobweb plot of the map $f^{n+1}(x_n)=\mu x_n (1-x_n)$; $\mu = 4$, $x_0 = 0.2$. The system has been "stabilised" over 1500 iterations.
+    From 32 recorded data points, 32 are unique.}
+    \label{fig:cobweb3}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/cobweb8.png}
+    \caption{Left: Continuation of Fig.~(\ref{fig:cobweb3}). Right: close up of the centre where the system attempts converging.}
+    \label{fig:cobweb4}
+\end{figure}
+
+\section{Fourier Transform of Time Series}
+
+First a Time Series of a system is generated, stabilised over 10'000 iterations
+and then 1000 data points are collected. Here a system is defined to be $f(x)$ for some specific Growth Rate $\mu$.
+A time series for a non chaotic should should oscillate between some set number $2^k$ fixed points.
+Then a fast Fourier Transform is taken of the series, with the results displayed in Fig.~(\ref{fig:4ier1}). Sec.~\ref{appendix:fourier}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/4ier5.png}
+    \caption{Time Series and its Fast Fourier Transform. From top to bottom: 1)$\mu=2$, Stable points = 1, Peaks = 0;
+    2)$\mu=3.2$, Stable points = 2, Peaks = 1;
+    3)$\mu=3.569$, Stable points = 32, Peaks = 31;
+    1)$\mu=3.8$, Stable points = none, Peaks = ?;
+    }
+    \label{fig:4ier1}
+\end{figure}
+
+In the non-chaotic regions the Fourier transform follows the pattern $2^k - 1$, where $k$ is the number of consecutive period doublings as 
+defined in previous sections. It appears that doing the Fourier Transform of a chaotic system's time series returns random noise. In an abstract
+setting as the one studied the Fourier transform does not seem to tell us anything beyond the 2 facts stated above. The reader is advised to 
+perform further research before deciding on the usefulness of this method.
+
+\section{Universality and Applications}
+
+In this work we have encountered two maps: $f^{n+1}(x_n)=\mu x_n (1-x_n)$ and $f^{n+1}(x_n)=\mu -  x_n^2$. However bifurcation maps
+can be observed for any one-dimensional maps with a single quadratic maximum. A comprehensive list can be found at \cite{wikichaoslist}.
+Feigenbaums constant is believed to be transcendental and it is yet uncertain whether it is a fundamental constant like $\pi$ and $e$.
+\cite{constantofnature}.
+
+Deterministic chaos manifests itself in many forms. Although this is a Physics paper, it would be injustice to the topic to discuss
+it strictly as one type of phenomenon. The more striking instances of deterministic chaos which the author encountered during his study
+were "Synchronous period-doubling in flicker vision of salamander 
+and man" \cite{salamander}, "Dynamics of period-doubling bifurcation to chaos in the 
+spontaneous neural firing patterns" \cite{neuralfiring}, "Controlling 
+cardiac chaos"\cite{cardiacchaos}, "Chaos and the Dynamics of Biological Populations"\cite{populations},
+"Low dimensional chaos in cardiac tissue"\cite{cardiacchaos2}, 
+"A new modified resource budget model for nonlinear dynamics in citrus production"\cite{citrusproduction} 
+and "Period doubling cascade in mercury, a quantitative measurement"\cite{mercury}.
+
+
+
+

@@ -1,0 +1,172 @@
+\documentclass[9pt, a4paper]{report}
+%---------------------------------------------------------------------
+
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\usepackage{amsfonts}
+\usepackage[english]{babel}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{csquotes}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{sample.bib}
+
+\addtolength{\textwidth}{2in}
+\addtolength{\textheight}{2in}
+\addtolength{\oddsidemargin}{-1in}
+\addtolength{\topmargin}{-1in}
+\setlength\parindent{0pt}
+%\usepackage{showframe}
+
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystylePython}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+%---------------------------------------------------------------------
+
+\begin{document}
+\lstset{style=mystylePython}
+
+\input{A_Title_Page}
+
+\tableofcontents
+\clearpage
+%---------------------------------------------------------------------
+
+\chapter{Introduction}
+\input{mazb_Introduction}
+\clearpage
+%---------------------------------------------------------------------
+
+\chapter{Proof of Chaotic Behaviour}
+\input{mazc_Proof}
+\clearpage
+%---------------------------------------------------------------------
+
+\chapter{Towards an Understanding of Chaos}
+\label{section:understandingChaos}
+\input{mazd_Understanding}
+\clearpage
+%---------------------------------------------------------------------
+
+%\chapter{Universality}
+%\input{maze_Universality}
+%\clearpage
+%---------------------------------------------------------------------
+
+%\chapter{Applications}
+%\input{mazf_Applications}
+%\clearpage
+%---------------------------------------------------------------------
+%
+%\chapter{Time Series Study}
+%\input{mazg_Time_series_study}
+%\clearpage
+%---------------------------------------------------------------------
+%
+%\chapter{Lyapunov Exponent}
+%\input{mazh_Lyapunov_exponent}
+%\clearpage
+%---------------------------------------------------------------------
+%
+
+\printbibliography[
+heading=bibintoc,
+title={Bibliography}
+]
+
+
+\begin{appendices}
+
+\chapter{The Code}
+\section{Running the Code}
+If this section is to be of any use to those interested in it,
+some non-trivial background information has to be given if the reader
+is to replicate the code.\\
+The machine used to run the code has the following properties:\\
+OS: Windows 10\\
+IDE: Spyder 4.1.2\\
+CPU: AMD Ryzen 5 2600 Six-Core Processor (2 logical cores per physical)\\
+The significance of the OS is the way multiprocessing is handled by
+the Python IDLE. With Windows the children of the main process are not allowed
+to interact with the IDLE, thus if one wished to run the code this has to be executed
+in an external terminal \cite{multistackdebug}. This can be done on Spyder by\\
+\textit{Tools$\rightarrow$Preferences$\rightarrow$Run$\rightarrow$Console:Execute in an external system terminal}.
+\paragraph{}
+The significance of the CPU type comes from the fact the author has
+utilised multiprocessing to solve the problem of long execution times
+that comes with generating large amounts of data ($>$1'000'000'000 calculations required).
+The software has been written to make use of 10 logical cores, and execution takes
+79 minutes on average.
+
+\newpage
+\section{Lyapunov Exponent}
+\label{appendix:lyapunov}
+\input{Appendix/Lyapunov exponent}
+%---------------------------------------------------------------------
+
+\section{Logic Map}
+\label{appendix:logicmap}
+\lstinputlisting[language=Python]{Code/Project.py}
+
+\section{Cobweb}
+\label{appendix:cobweb}
+\lstinputlisting[language=Python]{Code/ProjectCobweb.py}
+
+\section{Fourier}
+\label{appendix:fourier}
+\lstinputlisting[language=Python]{Code/ProjectFourier.py}
+
+\section{Transitivity Bar Chart}
+\label{appendix:transitivity}
+\lstinputlisting[language=Python]{Code/transitivity.py}
+
+\section{Dense in X max value graph}
+\label{appendix:maxvalue}
+\lstinputlisting[language=Python]{Code/max_value.py}
+
+\section{Feigenbaums Constant}
+\label{appendix:feigenconst}
+\lstinputlisting[language=Python]{Code/feigenbaums_constant.py}
+
+\end{appendices}
+%---------------------------------------------------------------------
+
+\end{document}
+
+
