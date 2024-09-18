@@ -5,10 +5,7 @@ Created on Fri Apr 24 17:07:10 2020
 @author: 967869@swansea.ac.uk
 """
 
-
-# Imports ---------------------------------------------------------------------
-import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot
 
 # Define constants ------------------------------------------------------------
 
@@ -55,7 +52,7 @@ def Scenario():
 Scenario()
 
 # Create the plot
-plt.plot(X, Y, ".")
+pyplot.plot(X, Y, ".")
 
 # Show the plot
-plt.show()
+pyplot.show()

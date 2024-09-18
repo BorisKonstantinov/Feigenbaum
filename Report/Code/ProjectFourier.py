@@ -5,10 +5,9 @@ Created on Thu Jan 30 14:11:24 2020
 @author: 967869@swansea.ac.uk
 """
 
-# Imports ---------------------------------------------------------------------
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy.fftpack import fft, ifft
+from matplotlib import pyplot
+from scipy.fftpack import fft
 
 # Define constants ------------------------------------------------------------
 
@@ -54,14 +53,14 @@ complexfourier = fft(History)
 fourier = complexfourier.real
 
 gradient = np.gradient(np.gradient(fourier))
-plt.plot(array[2::], fourier[2::], label="Fourier")
+pyplot.plot(array[2::], fourier[2::], label="Fourier")
 
 
-plt.plot(array[2::], History[2::], label="Series")
+pyplot.plot(array[2::], History[2::], label="Series")
 
-# plt.plot(array[2::],gradient[2::],label="Gradient")
-plt.legend()
-plt.show()
+# pyplot.plot(array[2::],gradient[2::],label="Gradient")
+pyplot.legend()
+pyplot.show()
 
 
 def countpeaks():

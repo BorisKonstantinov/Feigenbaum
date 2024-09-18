@@ -4,12 +4,13 @@ Created on Fri Apr 10 22:01:04 2020
 
 @author: 967869@swansea.ac.uk
 """
-# Imports ---------------------------------------------------------------------
+
 import decimal as d
 import multiprocessing as mp
 import time
-import matplotlib.pyplot as plt
+
 import numpy as np
+from matplotlib import pyplot
 
 # Define constants ------------------------------------------------------------
 START_TIME = time.time()
@@ -86,7 +87,7 @@ if __name__ == "__main__":
 
     ZERO = np.array(range(len(X))) * 0
 
-    plt.plot(X, ZERO)
-    plt.plot(X, Y)
-    plt.show()
+    pyplot.plot(X, ZERO)
+    pyplot.plot(X, Y)
+    pyplot.show()
     print(time.time() - START_TIME)

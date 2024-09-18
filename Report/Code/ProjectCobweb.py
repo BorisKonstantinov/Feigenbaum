@@ -5,9 +5,8 @@ Created on Thu Jan 30 14:11:24 2020
 @author: 967869@swansea.ac.uk
 """
 
-# Imports ---------------------------------------------------------------------
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot
 
 # Define constants ------------------------------------------------------------
 
@@ -53,7 +52,7 @@ o = m / 1000
 Cobweb()
 X.append(population)
 
-plt.plot(m / 1000, n)
-plt.plot(m / 1000, o)
-plt.plot(X, Y)
-plt.show()
+pyplot.plot(m / 1000, n)
+pyplot.plot(m / 1000, o)
+pyplot.plot(X, Y)
+pyplot.show()

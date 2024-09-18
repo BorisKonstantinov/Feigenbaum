@@ -5,9 +5,8 @@ Created on Wed Apr 15 14:24:32 2020
 @author: 967869@swansea.ac.uk
 """
 
-# Imports ---------------------------------------------------------------------
 import numpy as np
-import matplotlib.pyplot as plt
+from matplotlib import pyplot
 
 # Define constants ------------------------------------------------------------
 
@@ -56,5 +55,5 @@ for j in range(1000):
     X.append(3.49 + (j / 2000))
     Y.append(Law(3.49 + (j / 2000)))
 
-plt.bar(X, Y, edgecolor="green", width=0.0001)
-plt.show()
+pyplot.bar(X, Y, edgecolor="green", width=0.0001)
+pyplot.show()
