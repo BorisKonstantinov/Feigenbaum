@@ -1,53 +1,55 @@
-	# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Created on Fri Apr 10 22:01:04 2020
 
 @author: 967869@swansea.ac.uk
 """
-#Imports ---------------------------------------------------------------------
+# Imports ---------------------------------------------------------------------
 import decimal as d
 import multiprocessing as mp
 import time
 import matplotlib.pyplot as plt
 import numpy as np
 
-#Define constants ------------------------------------------------------------
+# Define constants ------------------------------------------------------------
 START_TIME = time.time()
 N = 10000
 DX = 0.00000001
 RESOLUTION = 1000
 
+
 #   f(x) ---------------------------------------------------------------------
 def lyapunov(rate):
     """Returns Lyapunov exponent for rate over N gen."""
     function = 0.2
-    d_function = function+DX
+    d_function = function + DX
     sigma = 0
 
     for i in range(N):
         function = rate * function * (1 - function)
-        d_function = rate * d_function * (1-d_function)
+        d_function = rate * d_function * (1 - d_function)
 
-        if d_function-function == 0:
+        if d_function - function == 0:
             break
 
         sigma += d.Decimal(abs(d_function - function) / DX).ln()
 
-    sigma = sigma / N #(i + 2)
+    sigma = sigma / N  # (i + 2)
     return sigma
 
-#Thread  functions-------------------------------------------------------------
+
+# Thread  functions-------------------------------------------------------------
 def loop(start, stop, X, Y):
     """Runs Lyapunov over a range of rates"""
     for i in range(start, stop):
-        X[i-(3*RESOLUTION)] = i / RESOLUTION
-        Y[i-(3*RESOLUTION)] = lyapunov(i / RESOLUTION)
+        X[i - (3 * RESOLUTION)] = i / RESOLUTION
+        Y[i - (3 * RESOLUTION)] = lyapunov(i / RESOLUTION)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    X = mp.Array('d', 1000)
-    Y = mp.Array('d', 1000)
+    X = mp.Array("d", 1000)
+    Y = mp.Array("d", 1000)
 
     CPU1 = mp.Process(target=loop, args=(3000, 3100, X, Y))
     CPU2 = mp.Process(target=loop, args=(3100, 3200, X, Y))

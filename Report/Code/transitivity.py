@@ -5,31 +5,33 @@ Created on Wed Apr 15 14:24:32 2020
 @author: 967869@swansea.ac.uk
 """
 
-#Imports ---------------------------------------------------------------------
+# Imports ---------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Define constants ------------------------------------------------------------
+# Define constants ------------------------------------------------------------
 
-X=[]
-Y=[]
+X = []
+Y = []
 
-#Law of the land -------------------------------------------------------------
+# Law of the land -------------------------------------------------------------
+
 
 def Law(rate):
     population = 0.2
     list = []
 
     for i in range(2000000):
-        population = rate * population * ( 1 - population )
+        population = rate * population * (1 - population)
 
     for i in range(50000):
-        population = rate * population * ( 1 - population )
+        population = rate * population * (1 - population)
         rounded = round(population, 5)
         if rounded not in list:
             list.append(rounded)
 
     return len(list)
+
 
 X.append(0.5)
 Y.append(Law(0.5))
@@ -47,12 +49,12 @@ X.append(2.5)
 Y.append(Law(2.5))
 
 for i in range(30):
-    X.append(2.98+(i/60))
-    Y.append(Law(2.98+(i/60)))
+    X.append(2.98 + (i / 60))
+    Y.append(Law(2.98 + (i / 60)))
 
 for j in range(1000):
-    X.append(3.49+(j/2000))
-    Y.append(Law(3.49+(j/2000)))
-             
-plt.bar(X, Y, edgecolor = 'green', width = 0.0001)
+    X.append(3.49 + (j / 2000))
+    Y.append(Law(3.49 + (j / 2000)))
+
+plt.bar(X, Y, edgecolor="green", width=0.0001)
 plt.show()
