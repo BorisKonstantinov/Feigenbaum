@@ -5,9 +5,11 @@ Created on Tue Apr 21 15:54:29 2020
 @author: 967869@swansea.ac.uk (Inspired by Rosetta Code)
 """
 
+
 def feigenbaum():
-    
+
     return 0
+
 
 max_it = 25  # For easier control over cycle length
 max_it_k = 100  #

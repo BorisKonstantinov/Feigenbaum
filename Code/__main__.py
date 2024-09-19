@@ -1,15 +1,10 @@
-
-
-
-
-
 options = [
     "Generate Feigenbaum's constant",
     "Obtain max value",
     "Lyapunov multiprocessing",
     "Cobweb plot",
     "Fourier plot",
-    "Transitivity"
+    "Transitivity",
 ]
 
 for i, option in enumerate(options, start=1):
@@ -31,4 +26,3 @@ elif choice == 2:
     lyapunov()
 else:
     print("Choice value error")
-    
