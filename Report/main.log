@@ -1,0 +1,1179 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.16)  21 SEP 2024 22:26
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/boris/Documents/Feigenbaum/Report/main.tex
+(/home/boris/Documents/Feigenbaum/Report/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@chapter=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen141
+\lightrulewidth=\dimen142
+\cmidrulewidth=\dimen143
+\belowrulesep=\dimen144
+\belowbottomsep=\dimen145
+\aboverulesep=\dimen146
+\abovetopsep=\dimen147
+\cmidrulesep=\dimen148
+\cmidrulekern=\dimen149
+\defaultaddspace=\dimen150
+\@cmidla=\count196
+\@cmidlb=\count197
+\@aboverulesep=\dimen151
+\@belowrulesep=\dimen152
+\@thisruleclass=\count198
+\@lastruleclass=\count199
+\@thisrulewidth=\dimen153
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen154
+\ar@mcellbox=\box51
+\extrarowheight=\dimen155
+\NC@list=\toks19
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box52
+)
+\everycr=\toks20
+\minrowclearance=\skip52
+\rownum=\count266
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count267
+\U@D=\dimen156
+\l@unhyphenated=\language5
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count268
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count269
+\c@@ppsavesec=\count270
+\c@@ppsaveapp=\count271
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count272
+\mult@box=\box53
+\multicol@leftmargin=\dimen159
+\c@unbalance=\count273
+\c@collectmore=\count274
+\doublecol@number=\count275
+\multicoltolerance=\count276
+\multicolpretolerance=\count277
+\full@width=\dimen160
+\page@free=\dimen161
+\premulticols=\dimen162
+\postmulticols=\dimen163
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
+\partial@page=\box54
+\last@line=\box55
+\mc@boxedresult=\box56
+\maxbalancingoverflow=\dimen164
+\mult@rightbox=\box57
+\mult@grightbox=\box58
+\mult@firstbox=\box59
+\mult@gfirstbox=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\c@minrows=\count278
+\c@columnbadness=\count279
+\c@finalcolumnbadness=\count280
+\last@try=\dimen165
+\multicolovershoot=\dimen166
+\multicolundershoot=\dimen167
+\mult@nat@firstbox=\box97
+\colbreak@box=\box98
+\mc@col@check@num=\count281
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen168
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen169
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count282
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count283
+\leftroot@=\count284
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count285
+\DOTSCASE@=\count286
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box99
+\strutbox@=\box100
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen170
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count287
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count288
+\dotsspace@=\muskip16
+\c@parentequation=\count289
+\dspbrk@lvl=\count290
+\tag@help=\toks24
+\row@=\count291
+\column@=\count292
+\maxfields@=\count293
+\andhelp@=\toks25
+\eqnshift@=\dimen171
+\alignsep@=\dimen172
+\tagshift@=\dimen173
+\tagwidth@=\dimen174
+\totwidth@=\dimen175
+\lineht@=\dimen176
+\@envbody=\toks26
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
+ (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count294
+)
+\csq@reset=\count295
+\csq@gtype=\count296
+\csq@glevel=\count297
+\csq@qlevel=\count298
+\csq@maxlvl=\count299
+\csq@tshold=\count300
+\csq@ltx@everypar=\toks28
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count301
+\lst@gtempboxa=\box101
+\lst@token=\toks29
+\lst@length=\count302
+\lst@currlwidth=\dimen177
+\lst@column=\count303
+\lst@pos=\count304
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count305
+\lst@lineno=\count306
+\lst@maxwidth=\dimen180
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count307
+\lst@skipnumbers=\count308
+\lst@framebox=\box102
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count309
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count310
+\c@listtotal=\count311
+\c@listcount=\count312
+\c@liststart=\count313
+\c@liststop=\count314
+\c@citecount=\count315
+\c@citetotal=\count316
+\c@multicitecount=\count317
+\c@multicitetotal=\count318
+\c@instcount=\count319
+\c@maxnames=\count320
+\c@minnames=\count321
+\c@maxitems=\count322
+\c@minitems=\count323
+\c@citecounter=\count324
+\c@maxcitecounter=\count325
+\c@savedcitecounter=\count326
+\c@uniquelist=\count327
+\c@uniquename=\count328
+\c@refsection=\count329
+\c@refsegment=\count330
+\c@maxextratitle=\count331
+\c@maxextratitleyear=\count332
+\c@maxextraname=\count333
+\c@maxextradate=\count334
+\c@maxextraalpha=\count335
+\c@abbrvpenalty=\count336
+\c@highnamepenalty=\count337
+\c@lownamepenalty=\count338
+\c@maxparens=\count339
+\c@parenlevel=\count340
+\blx@tempcnta=\count341
+\blx@tempcntb=\count342
+\blx@tempcntc=\count343
+\c@blx@maxsection=\count344
+\blx@maxsegment@0=\count345
+\blx@notetype=\count346
+\blx@parenlevel@text=\count347
+\blx@parenlevel@foot=\count348
+\blx@sectionciteorder@0=\count349
+\blx@sectionciteorderinternal@0=\count350
+\blx@entrysetcounter=\count351
+\blx@biblioinstance=\count352
+\labelnumberwidth=\skip58
+\labelalphawidth=\skip59
+\biblabelsep=\skip60
+\bibitemsep=\skip61
+\bibnamesep=\skip62
+\bibinitsep=\skip63
+\bibparsep=\skip64
+\bibhang=\skip65
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language6
+\c@mincomprange=\count353
+\c@maxcomprange=\count354
+\c@mincompwidth=\count355
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count356
+\c@savedafterword=\count357
+\c@annotator=\count358
+\c@savedannotator=\count359
+\c@author=\count360
+\c@savedauthor=\count361
+\c@bookauthor=\count362
+\c@savedbookauthor=\count363
+\c@commentator=\count364
+\c@savedcommentator=\count365
+\c@editor=\count366
+\c@savededitor=\count367
+\c@editora=\count368
+\c@savededitora=\count369
+\c@editorb=\count370
+\c@savededitorb=\count371
+\c@editorc=\count372
+\c@savededitorc=\count373
+\c@foreword=\count374
+\c@savedforeword=\count375
+\c@holder=\count376
+\c@savedholder=\count377
+\c@introduction=\count378
+\c@savedintroduction=\count379
+\c@namea=\count380
+\c@savednamea=\count381
+\c@nameb=\count382
+\c@savednameb=\count383
+\c@namec=\count384
+\c@savednamec=\count385
+\c@translator=\count386
+\c@savedtranslator=\count387
+\c@shortauthor=\count388
+\c@savedshortauthor=\count389
+\c@shorteditor=\count390
+\c@savedshorteditor=\count391
+\c@labelname=\count392
+\c@savedlabelname=\count393
+\c@institution=\count394
+\c@savedinstitution=\count395
+\c@lista=\count396
+\c@savedlista=\count397
+\c@listb=\count398
+\c@savedlistb=\count399
+\c@listc=\count400
+\c@savedlistc=\count401
+\c@listd=\count402
+\c@savedlistd=\count403
+\c@liste=\count404
+\c@savedliste=\count405
+\c@listf=\count406
+\c@savedlistf=\count407
+\c@location=\count408
+\c@savedlocation=\count409
+\c@organization=\count410
+\c@savedorganization=\count411
+\c@origlocation=\count412
+\c@savedoriglocation=\count413
+\c@origpublisher=\count414
+\c@savedorigpublisher=\count415
+\c@publisher=\count416
+\c@savedpublisher=\count417
+\c@language=\count418
+\c@savedlanguage=\count419
+\c@origlanguage=\count420
+\c@savedoriglanguage=\count421
+\c@pageref=\count422
+\c@savedpageref=\count423
+\shorthandwidth=\skip66
+\shortjournalwidth=\skip67
+\shortserieswidth=\skip68
+\shorttitlewidth=\skip69
+\shortauthorwidth=\skip70
+\shorteditorwidth=\skip71
+\locallabelnumberwidth=\skip72
+\locallabelalphawidth=\skip73
+\localshorthandwidth=\skip74
+\localshortjournalwidth=\skip75
+\localshortserieswidth=\skip76
+\localshorttitlewidth=\skip77
+\localshortauthorwidth=\skip78
+\localshorteditorwidth=\skip79
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count424
+\c@textcitetotal=\count425
+\c@textcitemaxnames=\count426
+\c@biburlbigbreakpenalty=\count427
+\c@biburlbreakpenalty=\count428
+\c@biburlnumpenalty=\count429
+\c@biburlucpenalty=\count430
+\c@biburllcpenalty=\count431
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count432
+)
+Package biblatex Info: Trying to load bibliography style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx
+File: alphabetic.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count433
+\c@bbx:relatedtotal=\count434
+))
+Package biblatex Info: Trying to load citation style 'alphabetic'...
+Package biblatex Info: ... file 'alphabetic.cbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
+File: alphabetic.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count435
+\l__pdf_internal_box=\box103
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2024-01-22 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
+
+
+LaTeX Warning: Unused global option(s):
+    [9pt].
+
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
+LaTeX Font Info:    ... okay on input line 62.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count436
+\scratchdimen=\dimen181
+\scratchbox=\box104
+\nofMPsegments=\count437
+\nofMParguments=\count438
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count439
+\MPscratchDim=\dimen182
+\MPnumerator=\count440
+\makeMPintoPDFobject=\count441
+\everyMPtoPDFconversion=\toks31
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@lstlisting=\count442
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' not found.
+
+No file main.bbl.
+Package biblatex Info: Reference section=0 on input line 62.
+Package biblatex Info: Reference segment=0 on input line 62.
+(./A_Title_Page.tex
+<Images/sulogo.png, id=1, 417.81094pt x 259.7203pt>
+File: Images/sulogo.png Graphic file (type png)
+<use Images/sulogo.png>
+Package pdftex.def Info: Images/sulogo.png  used on input line 14.
+(pdftex.def)             Requested size: 293.72697pt x 182.59953pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/sulogo.png>] [1])
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+[1
+
+]
+Chapter 1.
+(./mazb_Introduction.tex
+
+LaTeX Warning: Citation 'baker' on page 2 undefined on input line 13.
+
+
+LaTeX Warning: Citation 'devaney' on page 2 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'banks' on page 2 undefined on input line 28.
+
+
+LaTeX Warning: Citation 'crannell' on page 2 undefined on input line 28.
+
+
+LaTeX Warning: Citation 'erdmann' on page 2 undefined on input line 39.
+
+) [2
+
+
+]
+Chapter 2.
+(./mazc_Proof.tex
+
+LaTeX Warning: Reference `eq:themapf' on page 3 undefined on input line 2.
+
+
+LaTeX Warning: Reference `eq:domain' on page 3 undefined on input line 10.
+
+
+LaTeX Warning: Reference `eq:domain' on page 3 undefined on input line 18.
+
+
+LaTeX Warning: Reference `fig:setnime' on page 3 undefined on input line 19.
+
+<Images/setnime.png, id=27, 722.7pt x 485.56406pt>
+File: Images/setnime.png Graphic file (type png)
+<use Images/setnime.png>
+Package pdftex.def Info: Images/setnime.png  used on input line 23.
+(pdftex.def)             Requested size: 195.813pt x 131.5634pt.
+
+LaTeX Warning: Reference `fig:trans1' on page 3 undefined on input line 30.
+
+
+LaTeX Warning: Reference `eq:themapf' on page 3 undefined on input line 31.
+
+<Images/trans 1.png, id=28, 1582.91376pt x 826.08624pt>
+File: Images/trans 1.png Graphic file (type png)
+<use Images/trans 1.png>
+Package pdftex.def Info: Images/trans 1.png  used on input line 35.
+(pdftex.def)             Requested size: 391.63348pt x 204.37819pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Images/Untitled.png, id=29, 2465.46094pt x 1300.1072pt>
+File: Images/Untitled.png Graphic file (type png)
+<use Images/Untitled.png>
+Package pdftex.def Info: Images/Untitled.png  used on input line 48.
+(pdftex.def)             Requested size: 391.63348pt x 206.5137pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:trans2' on page 3 undefined on input line 53.
+
+
+LaTeX Warning: Reference `appendix:transitivity' on page 3 undefined on input line 58.
+
+
+LaTeX Warning: Reference `eq:themapf' on page 3 undefined on input line 59.
+
+[3
+
+
+ <./Images/setnime.png>]
+
+LaTeX Warning: Reference `eq:themapf' on page 4 undefined on input line 69.
+
+
+LaTeX Warning: Reference `eq:domain' on page 4 undefined on input line 71.
+
+
+LaTeX Warning: Citation 'baker' on page 4 undefined on input line 79.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--80
+
+ []
+
+<Images/max at 0.png, id=34, 204.765pt x 125.46875pt>
+File: Images/max at 0.png Graphic file (type png)
+<use Images/max at 0.png>
+Package pdftex.def Info: Images/max at 0.png  used on input line 83.
+(pdftex.def)             Requested size: 244.76999pt x 149.99121pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:topof0' on page 4 undefined on input line 88.
+
+
+LaTeX Warning: Reference `appendix:maxvalue' on page 4 undefined on input line 88.
+
+
+LaTeX Warning: Reference `eq:themapf' on page 4 undefined on input line 111.
+
+[4 <./Images/trans 1.png> <./Images/Untitled.png>]
+
+LaTeX Warning: Citation 'baker' on page 5 undefined on input line 138.
+
+
+LaTeX Warning: Reference `eq:2.1' on page 5 undefined on input line 140.
+
+
+LaTeX Warning: Reference `eq:2.1' on page 5 undefined on input line 141.
+
+
+LaTeX Warning: Reference `eq:2.3' on page 5 undefined on input line 174.
+
+
+LaTeX Warning: Reference `eq:2.2' on page 5 undefined on input line 175.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) [5 <./Images/max at 0.png>]
+
+LaTeX Warning: Reference `eq:2.4' on page 6 undefined on input line 217.
+
+
+LaTeX Warning: Reference `fig:fig1' on page 6 undefined on input line 229.
+
+<Images/difference.png, id=46, 462.528pt x 346.896pt>
+File: Images/difference.png Graphic file (type png)
+<use Images/difference.png>
+Package pdftex.def Info: Images/difference.png  used on input line 232.
+(pdftex.def)             Requested size: 391.63348pt x 293.74081pt.
+[6 <./Images/difference.png>]
+
+LaTeX Warning: Reference `fig:fig1' on page 7 undefined on input line 244.
+
+
+LaTeX Warning: Reference `fig:fig2' on page 7 undefined on input line 247.
+
+<Images/diff3.45555.png, id=54, 462.528pt x 346.896pt>
+File: Images/diff3.45555.png Graphic file (type png)
+<use Images/diff3.45555.png>
+Package pdftex.def Info: Images/diff3.45555.png  used on input line 254.
+(pdftex.def)             Requested size: 342.6765pt x 257.0219pt.
+
+LaTeX Warning: Reference `eq:2.5' on page 7 undefined on input line 272.
+
+
+LaTeX Warning: Reference `appendix:lyapunov' on page 7 undefined on input line 275.
+
+[7 <./Images/diff3.45555.png>]
+<Images/Lyapunov 3.1.png, id=59, 963.6pt x 485.31313pt>
+File: Images/Lyapunov 3.1.png Graphic file (type png)
+<use Images/Lyapunov 3.1.png>
+Package pdftex.def Info: Images/Lyapunov 3.1.png  used on input line 284.
+(pdftex.def)             Requested size: 342.6765pt x 172.58727pt.
+
+
+LaTeX Warning: Reference `section:MethodologyAndCode' on page 8 undefined on input line 292.
+
+
+LaTeX Warning: Reference `fig:fig3' on page 8 undefined on input line 307.
+
+
+LaTeX Warning: Reference `section:understandingChaos' on page 8 undefined on input line 311.
+
+
+LaTeX Warning: Reference `fig:fig4' on page 8 undefined on input line 313.
+
+[8 <./Images/Lyapunov 3.1.png>]
+<Images/Lyapunov 3.3.1.png, id=64, 252.945pt x 146.04562pt>
+File: Images/Lyapunov 3.3.1.png Graphic file (type png)
+<use Images/Lyapunov 3.3.1.png>
+Package pdftex.def Info: Images/Lyapunov 3.3.1.png  used on input line 318.
+(pdftex.def)             Requested size: 342.6765pt x 197.85947pt.
+
+
+LaTeX Warning: Reference `fig:fig3' on page 9 undefined on input line 319.
+
+
+LaTeX Warning: Reference `section:MethodologyAndCode' on page 9 undefined on input line 333.
+
+
+LaTeX Warning: Reference `section:MethodologyAndCode' on page 9 undefined on input line 341.
+
+
+LaTeX Warning: Reference `fig:fig5' on page 9 undefined on input line 344.
+
+<Images/Lyapunov 5O.png, id=65, 949.5475pt x 681.54625pt>
+File: Images/Lyapunov 5O.png Graphic file (type png)
+<use Images/Lyapunov 5O.png>
+Package pdftex.def Info: Images/Lyapunov 5O.png  used on input line 348.
+(pdftex.def)             Requested size: 342.6765pt x 245.95964pt.
+
+LaTeX Warning: Reference `fig:fig3' on page 9 undefined on input line 353.
+
+
+LaTeX Warning: Reference `fig:fig3' on page 9 undefined on input line 353.
+
+
+LaTeX Warning: Reference `section:MethodologyAndCode' on page 9 undefined on input line 360.
+
+[9 <./Images/Lyapunov 3.3.1.png> <./Images/Lyapunov 5O.png>]
+
+LaTeX Warning: Reference `fig:fig3' on page 10 undefined on input line 377.
+
+
+LaTeX Warning: Citation 'chaosatwolfram' on page 10 undefined on input line 385.
+
+) [10]
+Chapter 3.
+(./mazd_Understanding.tex
+<Images/faigengeneral1.png, id=74, 1635.61063pt x 857.70438pt>
+File: Images/faigengeneral1.png Graphic file (type png)
+<use Images/faigengeneral1.png>
+Package pdftex.def Info: Images/faigengeneral1.png  used on input line 8.
+(pdftex.def)             Requested size: 342.6765pt x 179.69135pt.
+
+
+LaTeX Warning: Reference `appendix:logicmap' on page 11 undefined on input line 10.
+
+
+LaTeX Warning: Reference `appendix:logicmap' on page 11 undefined on input line 10.
+
+<Images/feigen3.png, id=75, 1635.61063pt x 857.70438pt>
+File: Images/feigen3.png Graphic file (type png)
+<use Images/feigen3.png>
+Package pdftex.def Info: Images/feigen3.png  used on input line 16.
+(pdftex.def)             Requested size: 342.6765pt x 179.69135pt.
+
+LaTeX Warning: Reference `fig:feigen1' on page 11 undefined on input line 18.
+
+
+LaTeX Warning: Reference `eq:ratio' on page 11 undefined on input line 18.
+
+
+LaTeX Warning: Reference `fig:feigen1' on page 11 undefined on input line 22.
+
+[11
+
+
+ <./Images/faigengeneral1.png> <./Images/feigen3.png>]
+
+LaTeX Warning: Reference `fig:feigen2' on page 12 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'feigenbaumconstant' on page 12 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'briggsconstant' on page 12 undefined on input line 57.
+
+
+LaTeX Warning: Citation 'briggsconstant2' on page 12 undefined on input line 58.
+
+
+LaTeX Warning: Citation 'Broadhurst' on page 12 undefined on input line 59.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--60
+
+ []
+
+
+LaTeX Warning: Citation 'feigenbaumconstant' on page 12 undefined on input line 67.
+
+
+LaTeX Warning: Citation 'briggspc' on page 12 undefined on input line 70.
+
+
+LaTeX Warning: Reference `fig:feigen1' on page 12 undefined on input line 73.
+
+
+LaTeX Warning: Reference `fig:trans1' on page 12 undefined on input line 75.
+
+<Images/feigen4.png, id=81, 1635.61063pt x 857.70438pt>
+File: Images/feigen4.png Graphic file (type png)
+<use Images/feigen4.png>
+Package pdftex.def Info: Images/feigen4.png  used on input line 88.
+(pdftex.def)             Requested size: 342.6765pt x 179.69135pt.
+
+LaTeX Warning: Reference `fig:feigen1' on page 12 undefined on input line 91.
+
+
+LaTeX Warning: Reference `fig:feigen1' on page 12 undefined on input line 91.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:feigen1' on page 12 undefined on input line 96.
+
+
+LaTeX Warning: Reference `fig:feigen1' on page 12 undefined on input line 117.
+
+
+LaTeX Warning: Reference `fig:feigen1' on page 12 undefined on input line 117.
+
+
+LaTeX Warning: Reference `eq:trueratio' on page 12 undefined on input line 123.
+
+[12]
+
+LaTeX Warning: Citation 'chaosatwolfram2' on page 13 undefined on input line 137.
+
+
+LaTeX Warning: Reference `eq:Fixed point' on page 13 undefined on input line 138.
+
+
+LaTeX Warning: Reference `eq:Fixed point 0' on page 13 undefined on input line 145.
+
+[13 <./Images/feigen4.png>]
+
+LaTeX Warning: Reference `fig:feigen2' on page 14 undefined on input line 258.
+
+[14]
+
+LaTeX Warning: Reference `eq:hofmu' on page 15 undefined on input line 314.
+
+
+LaTeX Warning: Reference `eq:trueself' on page 15 undefined on input line 324.
+
+
+LaTeX Warning: Citation 'briggspc' on page 15 undefined on input line 339.
+
+
+LaTeX Warning: Reference `eq:trueself2' on page 15 undefined on input line 351.
+
+
+LaTeX Warning: Reference `eq:trueself' on page 15 undefined on input line 373.
+
+
+LaTeX Warning: Reference `eq:trueself3' on page 15 undefined on input line 374.
+
+
+LaTeX Warning: Reference `eq:trueself4' on page 15 undefined on input line 375.
+
+
+LaTeX Warning: Reference `eq:trueself5' on page 15 undefined on input line 375.
+
+
+LaTeX Warning: Reference `eq:trueself' on page 15 undefined on input line 376.
+
+
+LaTeX Warning: Citation 'rosetacode' on page 15 undefined on input line 378.
+
+[15]
+
+LaTeX Warning: Citation 'briggspc' on page 16 undefined on input line 403.
+
+
+LaTeX Warning: Citation 'rosetacode' on page 16 undefined on input line 404.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
+
+ []
+
+<Images/feigen5.png, id=95, 409.0482pt x 189.3474pt>
+File: Images/feigen5.png Graphic file (type png)
+<use Images/feigen5.png>
+Package pdftex.def Info: Images/feigen5.png  used on input line 408.
+(pdftex.def)             Requested size: 293.72697pt x 135.96886pt.
+
+LaTeX Warning: Reference `fig:feigen5' on page 16 undefined on input line 414.
+
+
+LaTeX Warning: Reference `eq:trueself3' on page 16 undefined on input line 417.
+
+
+LaTeX Warning: Reference `eq:trueself4' on page 16 undefined on input line 418.
+
+
+LaTeX Warning: Reference `eq:trueself6' on page 16 undefined on input line 419.
+
+
+LaTeX Warning: Reference `appendix:feigenconst' on page 16 undefined on input line 425.
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 456.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `tab:bestfeigenever' on page 16 undefined on input line 461.
+
+
+LaTeX Warning: Citation 'Broadhurst' on page 16 undefined on input line 465.
+
+[16 <./Images/feigen5.png>]
+
+LaTeX Warning: Reference `fig:cobweb1' on page 17 undefined on input line 472.
+
+
+LaTeX Warning: Reference `fig:cobweb1' on page 17 undefined on input line 473.
+
+
+LaTeX Warning: Citation 'feigenbaumconstant' on page 17 undefined on input line 475.
+
+
+LaTeX Warning: Reference `eq:cobweb1' on page 17 undefined on input line 478.
+
+
+LaTeX Warning: Reference `appendix:cobweb' on page 17 undefined on input line 479.
+
+<Images/cobweb4.png, id=101, 516.93124pt x 118.4425pt>
+File: Images/cobweb4.png Graphic file (type png)
+<use Images/cobweb4.png>
+Package pdftex.def Info: Images/cobweb4.png  used on input line 488.
+(pdftex.def)             Requested size: 489.54pt x 112.17091pt.
+
+LaTeX Warning: Reference `fig:cobweb1' on page 17 undefined on input line 494.
+
+
+LaTeX Warning: Reference `fig:cobweb2' on page 17 undefined on input line 498.
+
+<Images/cobweb5.png, id=102, 265.2309pt x 193.6836pt>
+File: Images/cobweb5.png Graphic file (type png)
+<use Images/cobweb5.png>
+Package pdftex.def Info: Images/cobweb5.png  used on input line 504.
+(pdftex.def)             Requested size: 293.72697pt x 214.50072pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:cobweb3' on page 17 undefined on input line 511.
+
+
+LaTeX Warning: Reference `fig:cobweb3' on page 17 undefined on input line 515.
+
+[17 <./Images/cobweb4.png>]
+<Images/cobweb6.png, id=108, 321.6015pt x 233.4321pt>
+File: Images/cobweb6.png Graphic file (type png)
+<use Images/cobweb6.png>
+Package pdftex.def Info: Images/cobweb6.png  used on input line 520.
+(pdftex.def)             Requested size: 293.72697pt x 213.20358pt.
+<Images/cobweb8.png, id=109, 504.38437pt x 198.24063pt>
+File: Images/cobweb8.png Graphic file (type png)
+<use Images/cobweb8.png>
+Package pdftex.def Info: Images/cobweb8.png  used on input line 528.
+(pdftex.def)             Requested size: 489.54pt x 192.40813pt.
+
+
+LaTeX Warning: Reference `fig:cobweb3' on page 18 undefined on input line 529.
+
+
+LaTeX Warning: Reference `fig:cobweb3' on page 18 undefined on input line 529.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:4ier1' on page 18 undefined on input line 538.
+
+
+LaTeX Warning: Reference `appendix:fourier' on page 18 undefined on input line 538.
+
+<Images/4ier5.png, id=110, 808.52063pt x 934.99312pt>
+File: Images/4ier5.png Graphic file (type png)
+<use Images/4ier5.png>
+Package pdftex.def Info: Images/4ier5.png  used on input line 542.
+(pdftex.def)             Requested size: 489.54pt x 566.122pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation 'wikichaoslist' on page 18 undefined on input line 559.
+
+
+LaTeX Warning: Citation 'constantofnature' on page 18 undefined on input line 561.
+
+[18 <./Images/cobweb5.png> <./Images/cobweb6.png>]
+
+LaTeX Warning: Citation 'salamander' on page 19 undefined on input line 566.
+
+
+LaTeX Warning: Citation 'neuralfiring' on page 19 undefined on input line 567.
+
+
+LaTeX Warning: Citation 'cardiacchaos' on page 19 undefined on input line 568.
+
+
+LaTeX Warning: Citation 'populations' on page 19 undefined on input line 568.
+
+
+LaTeX Warning: Citation 'cardiacchaos2' on page 19 undefined on input line 569.
+
+
+LaTeX Warning: Citation 'citrusproduction' on page 19 undefined on input line 570.
+
+
+LaTeX Warning: Citation 'mercury' on page 19 undefined on input line 571.
+
+) [19 <./Images/cobweb8.png>] [20 <./Images/4ier5.png>]
+
+LaTeX Warning: Empty bibliography on input line 108.
+
+[21
+
+
+
+]
+Appendix A.
+
+LaTeX Warning: Citation 'multistackdebug' on page 22 undefined on input line 128.
+
+[22
+
+] (./Appendix/Lyapunov exponent.tex
+
+! Package Listings Error: File `Code/lyapunov_multiprocessing(.py)' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: py)
+
+Enter file name: 
+./Appendix/Lyapunov exponent.tex:1: Emergency stop.
+<read *> 
+         
+l.1 ...e=Python]{Code/lyapunov_multiprocessing.py}
+                                                  ^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 14832 strings out of 476182
+ 263404 string characters out of 5795595
+ 2089975 words of memory out of 5000000
+ 36674 multiletter control sequences out of 15000+600000
+ 565633 words of font info for 65 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 66i,12n,81p,717b,1829s stack positions out of 10000i,1000n,20000p,200000b,200000s
+./Appendix/Lyapunov exponent.tex:1:  ==> Fatal error occurred, no output PDF file produced!

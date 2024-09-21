@@ -1,3 +1,8 @@
+"""
+The program can be ran through main with `python code` command in your terminal,
+or through each file individually.·..·@ſeæßð«»¢æßð@ſßßßææ«««»»¢¢ððee¶¶đ„„ŋ¶ŧŋ““”ħ←ŧ↓ˀ”“”µħˀĸłˀĸ↓→øŧ←↓
+"""
+
 options = [
     "Generate Feigenbaum's constant",
     "Obtain max value",
