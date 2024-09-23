@@ -31,9 +31,9 @@ def feigenbaum(max_it=25, max_it_k=100, f=4.92, p=0, dp= 0, mu=None):
         mu[2] = mu[1] + (mu[1] - mu[0]) / f
         for _ in range(1, max_it_k + 1):
             for __ in range(1, (1 << i) + 1):
-                p_ = 1.0 - 2.0 * p_ * p
+                dp = 1.0 - 2.0 * dp * p
                 p = mu - p**2
-            mu[2] = mu[2] - p / p_
+            mu[2] = mu[2] - p / dp
 
         f = (mu[1] - mu[0]) / (mu[2] - mu[1])
         mu[0], mu[1] = mu[1], mu[2]
