@@ -25,6 +25,13 @@ def feigenbaum(max_it=25, max_it_k=100, f=4.92, p=0, dp= 0, mu=None):
     if mu is None:
         mu = [0, 1, 0]
 
+    mu[2] = mu[1] + (mu[1] - mu[0]) / f
+    dp = 1 - 2 * p * dp
+    for _ in range(100):
+        mu[2] = mu[2] - p / dp
+        p = mu[2] - p**2
+
+
 
     for i in range(2, max_it + 1):
 
