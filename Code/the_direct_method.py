@@ -25,4 +25,12 @@ def feigenbaum(range_i=10, range_j=100, f=3.2, mu=None):
     return f
 
 
-print(feigenbaum())
+def feigenbaum_table():
+    print(f"{'range_i':<10}{'f':>20}")  # Table header
+    print("-" * 30)
+    for i in range(1, 16):
+        f_value = feigenbaum(range_i=i)
+        print(f"{i:<10}{f_value:>20.12f}")
+
+
+feigenbaum_table()
