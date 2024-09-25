@@ -15,6 +15,7 @@ decimal places        | time (s)
 
 from decimal import Decimal, getcontext
 
+
 def feigenbaum(range_i=10, range_j=100, f=Decimal(3.2), mu=None):
     if mu is None:
         mu = [Decimal(0), Decimal(1), Decimal(0)]
@@ -34,14 +35,17 @@ def feigenbaum(range_i=10, range_j=100, f=Decimal(3.2), mu=None):
         mu[0], mu[1] = mu[1], mu[2]
     return f
 
+
 # Set precision
 getcontext().prec = 60
 
+
 def feigenbaum_table():
     print(f"{'range_i':<10}{'f':>20}")
-    print('-' * 65)
+    print("-" * 65)
     for i in range(1, 16):
         f_value = feigenbaum(range_i=i)
         print(f"{i:<10}{f_value:>20}")
+
 
 feigenbaum_table()
