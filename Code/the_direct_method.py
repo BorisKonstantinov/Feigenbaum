@@ -1,7 +1,9 @@
 """ --- The Direct Method ---
-Created on Tue Apr 21 15:54:29 2020
+Based on Briggs K., 1991: https://www.jstor.org/stable/2938684
+Reference value at https://oeis.org/A006890/constant
 
-Based on Briggs, 1991: https://www.jstor.org/stable/2938684
+This method is limited by the precision of the regular double type variable
+in Python. For higher precision see the_direct_method_decimal.py
 """
 
 
@@ -12,10 +14,10 @@ def feigenbaum(range_i=10, range_j=100, f=3.2, mu=None):
     for i in range(2, range_i + 1):
         mu[2] = mu[1] + (mu[1] - mu[0]) / f
 
-        for j in range(range_j):
+        for _ in range(range_j):
             p = 0
             dp = 0
-            for k in range(2**i):
+            for __ in range(2**i):
                 dp = 1 - 2 * dp * p
                 p = mu[2] - p**2
             mu[2] -= p / dp
@@ -32,5 +34,6 @@ def feigenbaum_table():
     for i in range(1, 16):
         f_value = feigenbaum(range_i=i)
         print(f"{i:<10}{f_value:>20.12f}")
+
 
 feigenbaum_table()
