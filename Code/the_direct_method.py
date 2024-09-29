@@ -1,17 +1,22 @@
-""" --- The Direct Method ---
-Based on Briggs K., 1991: https://www.jstor.org/stable/2938684
+"""
+--- The Direct Method ---
+Based on Briggs K., 1991: https://keithbriggs.info/documents/how-to-calc.pdf
 Reference value at https://oeis.org/A006890/constant
+
+The functions below obtain Feigenbaums constant.
+One makes use of the double type variable and is constrained by its
+accuracy.
+The other uses the decimal library to increase its precision, with the
+cost of computation time.
+This is also implemented in Fortran90 in the_direct_method.f90.
 """
 
 from decimal import Decimal, getcontext
 
-# Set precision
-getcontext().prec = 60
-
 
 def feigenbaum(range_i=10, range_j=100, f=3.2, mu=None):
     """
-    This method is limited by the precision of the regular double type
+    This function is limited by the precision of the double type
     variable in Python.
     """
     if mu is None:
@@ -33,7 +38,7 @@ def feigenbaum(range_i=10, range_j=100, f=3.2, mu=None):
     return f
 
 
-def feigenbaum_decimal(range_i=10, range_j=100, f=Decimal(3.2), mu=None):
+def feigenbaum_decimal(range_i=10, range_j=100, f=Decimal(3.2), mu=None, decimals=60):
     """
     This method has improved precision through increasing the available
     decimal places of variables with the decimal Python library.
@@ -45,6 +50,8 @@ def feigenbaum_decimal(range_i=10, range_j=100, f=Decimal(3.2), mu=None):
     30                    | 16.0
     60                    | 19.4
     """
+    getcontext().prec = decimals
+    
     if mu is None:
         mu = [Decimal(0), Decimal(1), Decimal(0)]
 
@@ -64,12 +71,12 @@ def feigenbaum_decimal(range_i=10, range_j=100, f=Decimal(3.2), mu=None):
     return f
 
 
-def feigenbaum_table():
+def feigenbaum_table(function, accuracy):
     print(f"{'range_i':<10}{'f':>20}")
     print("-" * 30)
-    for i in range(1, 16):
-        f_value = feigenbaum(range_i=i)
+    for i in range(1, accuracy + 1):
+        f_value = function(range_i=i)
         print(f"{i:<10}{f_value:>20.12f}")
 
 
-feigenbaum_table()
+feigenbaum_table(feigenbaum, 15)
