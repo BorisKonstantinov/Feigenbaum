@@ -51,7 +51,7 @@ def feigenbaum_decimal(range_i=10, range_j=100, f=Decimal(3.2), mu=None, decimal
     60                    | 19.4
     """
     getcontext().prec = decimals
-    
+
     if mu is None:
         mu = [Decimal(0), Decimal(1), Decimal(0)]
 
