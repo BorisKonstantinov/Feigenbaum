@@ -4,55 +4,45 @@ Created on Fri Apr 24 17:07:10 2020
 
 @author: 967869@swansea.ac.uk
 """
-
+import numpy as np
 from matplotlib import pyplot
 
-# Define constants ------------------------------------------------------------
 
-X = []
-Y = []
+class PopulationSimulator:
+    def __init__(
+        self,
+        resolution=100,
+        population=0.2,
+    ):
+        self.resolution = resolution
+        self.population = population
+        self.X = np.zeros(resolution)
+        self.Y = np.zeros(resolution)
 
-# Define variables ------------------------------------------------------------
+    def Law(self, population, rate):
+        return rate * population * (1 - population)
 
-rate = 0
-population = 0.2
+    def Cycle(self, rate):
+        population = self.population
+        for _ in range(2000):
+            population = self.Law(population, rate)
+        for i in range(self.resolution):
+            self.X[i] = population
+            self.Y[i] = self.Law(population, rate)
+            population = self.Y[i]
 
-# Law of the land -------------------------------------------------------------
+    def Scenario(self):
+        for rate in np.arange(0, 4, 0.001):
+            self.Cycle(rate)
 
+    def plot(self):
+        pyplot.plot(self.X, self.Y, ".")
+        pyplot.show()
 
-def Law(r):
-    global population
-    population = r * population * (1 - population)
-    # population = r - population**2
-    return population
-
-
-# Define functions ------------------------------------------------------------
-
-
-def Cycle(r):
-    global population
-    for i in range(2000):
-        Law(r)
-    for i in range(2000, 2100):
-        X.append(population)
-        Y.append(Law(r))
-    population = 0.2
-
-
-def Scenario():
-    global rate
-    for i in range(1, 4000):
-        Cycle(rate)
-        rate = i / 1000
+    def run(self):
+        self.Scenario()
+        self.plot()
 
 
-# Run this bad boy ------------------------------------------------------------
-
-Scenario()
-
-# Create the plot
-pyplot.plot(X, Y, ".")
-
-# Show the plot
-pyplot.show()
+simulator = PopulationSimulator()
+simulator.run()
