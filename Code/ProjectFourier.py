@@ -7,7 +7,7 @@ Created on Thu Jan 30 14:11:24 2020
 
 import numpy as np
 from matplotlib import pyplot
-from scipy.fftpack import fft
+from scipy.fft import fft
 
 # Define constants ------------------------------------------------------------
 
@@ -17,8 +17,6 @@ History = []
 # Define variables ------------------------------------------------------------
 
 rate = 2
-
-
 population = 0.5
 
 # Law of the land -------------------------------------------------------------
@@ -50,7 +48,7 @@ Series()
 
 
 complexfourier = fft(History)
-fourier = complexfourier.real
+fourier = complexfourier[0].real
 
 gradient = np.gradient(np.gradient(fourier))
 pyplot.plot(array[2::], fourier[2::], label="Fourier")
