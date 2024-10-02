@@ -13,7 +13,6 @@ from matplotlib import pyplot
 X = []
 Y = []
 
-# Law of the land -------------------------------------------------------------
 
 
 def Law(rate):
