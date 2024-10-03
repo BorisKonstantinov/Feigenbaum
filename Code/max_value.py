@@ -12,7 +12,7 @@ class PopulationSimulator:
     def __init__(
         self,
         resolution=100,
-        population=0.2,
+        population=0.3,
     ):
         self.resolution = resolution
         self.population = population
@@ -37,6 +37,11 @@ class PopulationSimulator:
 
     def plot(self):
         pyplot.plot(self.X, self.Y, ".")
+        pyplot.xlabel("x")
+        pyplot.ylabel("f(x)")
+        pyplot.title("Population Simulator")
+        pyplot.grid()
+        pyplot.tight_layout()
         pyplot.show()
 
     def run(self):

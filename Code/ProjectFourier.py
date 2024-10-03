@@ -16,7 +16,7 @@ History = []
 
 # Define variables ------------------------------------------------------------
 
-rate = 2
+rate = 3.6
 population = 0.5
 
 # Law of the land -------------------------------------------------------------
@@ -46,9 +46,7 @@ array = np.array(range(1000))
 
 Series()
 
-
-complexfourier = fft(History)
-fourier = complexfourier[0].real
+fourier = np.array(fft(History)).real
 
 gradient = np.gradient(np.gradient(fourier))
 pyplot.plot(array[2::], fourier[2::], label="Fourier")
