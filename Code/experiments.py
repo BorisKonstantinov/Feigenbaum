@@ -10,79 +10,71 @@ class PopulationSimulator:
     ):
         self.resolution = resolution
         self.population = population
-        self.X = np.zeros(resolution)
-        self.Y = np.zeros(resolution)
-
+        
     def Law(self, population, rate):
         return rate * population * (1 - population)
 
-    def Cycle(self, rate):
-        population = self.population
-        for _ in range(2000):
-            population = self.Law(population, rate)
-        for i in range(self.resolution):
-            self.X[i] = population
-            self.Y[i] = self.Law(population, rate)
-            population = self.Y[i]
-
-    def Scenario(self):
-        for rate in np.arange(0, 4, 0.001):
-            self.Cycle(rate)
-
-    def plot(self):
-        pyplot.plot(self.X, self.Y, ".")
-        pyplot.xlabel("x")
-        pyplot.ylabel("f(x)")
-        pyplot.title("Population Simulator")
+    def plot(self, X, Y, args, xlabel, ylabel, title):
+        pyplot.plot(X, Y, args)
+        pyplot.xlabel(xlabel)
+        pyplot.ylabel(ylabel)
+        pyplot.title(title)
         pyplot.grid()
         pyplot.tight_layout()
         pyplot.show()
 
     def run(self):
-        self.Scenario()
+        self.max_value()
         self.plot()
+
+    def max_value(self):
+        X = np.zeros(self.resolution)
+        Y = np.zeros(self.resolution)
+        population = self.population
+        for rate in np.arange(0, 4, 0.001):
+            for _ in range(2000):
+                population = self.Law(population, rate)
+            for i in range(self.resolution):
+                X[i] = population
+                Y[i] = population = self.Law(population, rate)
+        return X, Y
+    
+    def project(self):
+        X = np.zeros(self.resolution)
+        Y = np.zeros(self.resolution)
+        population = self.population
+        for rate in np.arange(0, 4, 0.001):
+            for _ in range(2000):
+                population = self.Law(population, rate)
+            for i in range(self.resolution):
+                X[i] = rate
+                Y[i] = population = self.Law(population, rate)
+        return X, Y
+    
+    def cobweb(self):
+        X = np.zeros(self.resolution)
+        Y = np.zeros(self.resolution)
+        population = self.population
+        Y[0] = 0
+        for rate in np.arange(0, 4, 0.001):
+            for _ in range(2000):
+                population = self.Law(population, rate)
+            for i in range(0, self.resolution, 2):
+                X[i] = population
+                X[i+1] = population
+                population = self.Law(population, rate)
+                Y[i+1] = population
+                Y[i+2] = population
+        return X, Y
+                
+
+
+
 
 
 simulator = PopulationSimulator()
 simulator.run()
 
-
-# -----------------------------------------------------------------------------
-X = []
-Y = []
-rate = 0
-population = 0.2
-def Law(r):
-    global population
-    population = r * population * (1 - population)
-    # population = r - population**2
-    return population
-
-
-def Cycle(r):
-    global population
-    for i in range(20000):
-        Law(r)
-    for i in range(20000, 21000):
-        X.append(rate)
-        Y.append(Law(r))
-    population = 0.2
-
-
-def Scenario():
-    global rate
-    for i in range(1, 2000):
-        Cycle(rate)
-        rate = i / 1000
-
-
-Scenario()
-
-# Create the plot
-pyplot.plot(X, Y, ".")
-
-# Show the plot
-pyplot.show()
 
 # ----------------------------------------------------------------------------- 
 # Append Y[0] = 0
