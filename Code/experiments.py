@@ -10,7 +10,7 @@ class PopulationSimulator:
     ):
         self.resolution = resolution
         self.population = population
-        
+
     def Law(self, population, rate):
         return rate * population * (1 - population)
 
@@ -38,7 +38,7 @@ class PopulationSimulator:
                 X[i] = population
                 Y[i] = population = self.Law(population, rate)
         return X, Y
-    
+
     def project(self):
         X = np.zeros(self.resolution)
         Y = np.zeros(self.resolution)
@@ -50,7 +50,7 @@ class PopulationSimulator:
                 X[i] = rate
                 Y[i] = population = self.Law(population, rate)
         return X, Y
-    
+
     def cobweb(self):
         X = np.zeros(self.resolution)
         Y = np.zeros(self.resolution)
@@ -61,25 +61,23 @@ class PopulationSimulator:
                 population = self.Law(population, rate)
             for i in range(0, self.resolution, 2):
                 X[i] = population
-                X[i+1] = population
+                X[i + 1] = population
                 population = self.Law(population, rate)
-                Y[i+1] = population
-                Y[i+2] = population
+                Y[i + 1] = population
+                Y[i + 2] = population
         return X, Y
-                
-
-
-
 
 
 simulator = PopulationSimulator()
 simulator.run()
 
 
-# ----------------------------------------------------------------------------- 
+# -----------------------------------------------------------------------------
 # Append Y[0] = 0
 rate = 4
 population = 0.2
+
+
 def Law():
     global population
     population = rate * population * (1 - population)
@@ -109,7 +107,8 @@ pyplot.plot(m / 1000, o)
 pyplot.plot(X, Y)
 pyplot.show()
 
-# ----------------------------------------------------------------------------- 
+
+# -----------------------------------------------------------------------------
 def Law(rate):
     population = 0.2
     list = []
@@ -148,4 +147,3 @@ for j in range(1000):
 
 pyplot.bar(X, Y, edgecolor="green", width=0.0001)
 pyplot.show()
-

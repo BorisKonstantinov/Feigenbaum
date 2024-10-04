@@ -1,15 +1,19 @@
 import timeit
 
+
 def solve(x):
     return x + 1
+
 
 def test1(func, x, rangex):
     for _ in range(rangex):
         x = func(x)
 
+
 def test2(x, rangex):
     for _ in range(rangex):
         x = solve(x)
+
 
 # Parameters
 x = 0

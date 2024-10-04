@@ -14,7 +14,6 @@ X = []
 Y = []
 
 
-
 def Law(rate):
     population = 0.2
     list = []
