@@ -72,8 +72,7 @@ simulator = PopulationSimulator()
 simulator.run()
 
 
-# -----------------------------------------------------------------------------
-# Append Y[0] = 0
+
 rate = 4
 population = 0.2
 
