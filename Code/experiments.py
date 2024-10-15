@@ -14,19 +14,6 @@ class PopulationSimulator:
     def Law(self, population, rate):
         return rate * population * (1 - population)
 
-    def plot(self, X, Y, args, xlabel, ylabel, title):
-        pyplot.plot(X, Y, args)
-        pyplot.xlabel(xlabel)
-        pyplot.ylabel(ylabel)
-        pyplot.title(title)
-        pyplot.grid()
-        pyplot.tight_layout()
-        pyplot.show()
-
-    def run(self):
-        self.max_value()
-        self.plot()
-
     def max_value(self):
         X = np.zeros(self.resolution)
         Y = np.zeros(self.resolution)
@@ -59,52 +46,34 @@ class PopulationSimulator:
         for rate in np.arange(0, 4, 0.001):
             for _ in range(2000):
                 population = self.Law(population, rate)
-            for i in range(0, self.resolution, 2):
-                X[i] = population
-                X[i + 1] = population
+            for i in range(2, self.resolution, 2):
+                X[i - 2] = population
+                X[i - 1] = population
                 population = self.Law(population, rate)
-                Y[i + 1] = population
-                Y[i + 2] = population
+                Y[i - 1] = population
+                Y[i] = population
+        X[-2] = population
         return X, Y
 
+    def transitivity(self):
+        
+
+
+    def plot(self, X, Y, args, xlabel, ylabel, title):
+        pyplot.plot(X, Y, args)
+        pyplot.xlabel(xlabel)
+        pyplot.ylabel(ylabel)
+        pyplot.title(title)
+        pyplot.grid()
+        pyplot.tight_layout()
+        pyplot.show()
+
+    def run(self):
+        self.max_value()
+        self.plot()
 
 simulator = PopulationSimulator()
 simulator.run()
-
-
-
-rate = 4
-population = 0.2
-
-
-def Law():
-    global population
-    population = rate * population * (1 - population)
-    return population
-
-
-def Cobweb():
-
-    for i in range(1500):
-        Law()
-
-    for i in range(320):
-        X.append(population)
-        X.append(population)
-        Law()
-        Y.append(population)
-        Y.append(population)
-
-
-m = np.array(range(1001))
-n = rate * (m / 1000) * (1 - (m / 1000))
-o = m / 1000
-Cobweb()
-X.append(population)
-pyplot.plot(m / 1000, n)
-pyplot.plot(m / 1000, o)
-pyplot.plot(X, Y)
-pyplot.show()
 
 
 # -----------------------------------------------------------------------------
