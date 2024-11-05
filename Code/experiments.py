@@ -18,12 +18,12 @@ class PopulationSimulator:
         X = np.zeros(self.resolution)
         Y = np.zeros(self.resolution)
         population = self.population
-        for rate in np.arange(0, 4, 0.001):
-            for _ in range(2000):
-                population = self.Law(population, rate)
-            for i in range(self.resolution):
-                X[i] = population
-                Y[i] = population = self.Law(population, rate)
+        rate = 3.999
+        for _ in range(2000):
+            population = self.Law(population, rate)
+        for i in range(self.resolution):
+            X[i] = population
+            Y[i] = population = self.Law(population, rate)
         return X, Y
 
     def project(self):
@@ -56,7 +56,7 @@ class PopulationSimulator:
         return X, Y
 
     def transitivity(self):
-        
+        return None
 
 
     def plot(self, X, Y, args, xlabel, ylabel, title):
@@ -69,8 +69,8 @@ class PopulationSimulator:
         pyplot.show()
 
     def run(self):
-        self.max_value()
-        self.plot()
+        X, Y = self.max_value()
+        self.plot(X, Y, ".", "x", "f(x)", "max_value experiments.py")
 
 simulator = PopulationSimulator()
 simulator.run()
@@ -91,27 +91,3 @@ def Law(rate):
             list.append(rounded)
 
     return len(list)
-
-
-X.append(0.5)
-Y.append(Law(0.5))
-X.append(1)
-Y.append(Law(1))
-X.append(1.5)
-Y.append(Law(1.5))
-X.append(2)
-Y.append(Law(2))
-X.append(2.5)
-Y.append(Law(2.5))
-for i in range(30):
-    X.append(2.98 + (i / 60))
-    Y.append(Law(2.98 + (i / 60)))
-
-
-for j in range(1000):
-    X.append(3.49 + (j / 2000))
-    Y.append(Law(3.49 + (j / 2000)))
-
-
-pyplot.bar(X, Y, edgecolor="green", width=0.0001)
-pyplot.show()

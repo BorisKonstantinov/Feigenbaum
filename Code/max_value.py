@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 24 17:07:10 2020
-
-@author: 967869@swansea.ac.uk
+description: Population simulator
 """
 import numpy as np
 from matplotlib import pyplot
@@ -11,41 +9,37 @@ from matplotlib import pyplot
 class PopulationSimulator:
     def __init__(
         self,
-        resolution=100,
-        population=0.3,
+        resolution_mu = 0.1,
+        resolution_x = 0.01
     ):
-        self.resolution = resolution
-        self.population = population
-        self.X = np.zeros(resolution)
-        self.Y = np.zeros(resolution)
+        self.resolution_mu = resolution_mu
+        self.resolution_x = resolution_x
+        array_length = int((4 / resolution_mu) * (1 / resolution_x))
+        self.X = self.Y = np.zeros(array_length)
 
-    def Law(self, population, rate):
-        return rate * population * (1 - population)
+    def Map(self, µ, x):
+        return µ * x * (1 - x)
 
-    def Cycle(self, rate):
-        population = self.population
-        for _ in range(2000):
-            population = self.Law(population, rate)
-        for i in range(self.resolution):
-            self.X[i] = population
-            self.Y[i] = self.Law(population, rate)
-            population = self.Y[i]
-
-    def Scenario(self):
-        for rate in np.arange(0, 4, 0.001):
-            self.Cycle(rate)
+    def Cycle(self):
+        index = 0
+        for µ in np.arange(0, 4, self.resolution_mu):
+            for x in np.arange(0, 1, self.resolution_x):
+                self.X[index] = x
+                self.Y[index] = self.Map(µ, x)
+                index += 1
 
     def plot(self):
-        pyplot.plot(self.X, self.Y, ".")
+        pyplot.figure(dpi=480)
+        pyplot.plot(self.X, self.Y, ".", markersize=1)
         pyplot.xlabel("x")
         pyplot.ylabel("f(x)")
-        pyplot.title("Population Simulator")
+        pyplot.title("Density in X")
         pyplot.grid()
         pyplot.tight_layout()
         pyplot.show()
 
     def run(self):
-        self.Scenario()
+        self.Cycle()
         self.plot()
 
 

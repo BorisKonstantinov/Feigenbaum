@@ -18,10 +18,10 @@ def Law(rate):
     population = 0.2
     list = []
 
-    for i in range(2000000):
+    for i in range(2000):
         population = rate * population * (1 - population)
 
-    for i in range(50000):
+    for i in range(100):
         population = rate * population * (1 - population)
         rounded = round(population, 5)
         if rounded not in list:
