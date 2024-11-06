@@ -58,7 +58,6 @@ class PopulationSimulator:
     def transitivity(self):
         return None
 
-
     def plot(self, X, Y, args, xlabel, ylabel, title):
         pyplot.plot(X, Y, args)
         pyplot.xlabel(xlabel)
@@ -71,6 +70,7 @@ class PopulationSimulator:
     def run(self):
         X, Y = self.max_value()
         self.plot(X, Y, ".", "x", "f(x)", "max_value experiments.py")
+
 
 simulator = PopulationSimulator()
 simulator.run()
