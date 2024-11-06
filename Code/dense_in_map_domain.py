@@ -16,6 +16,7 @@ from matplotlib import pyplot
 
 
 class PopulationSimulator:
+    """ Simulates the population growth using the map x = µx(1 - x)"""
     def __init__(self, resolution_mu=0.1, resolution_x=0.01):
         self.resolution_mu = resolution_mu
         self.resolution_x = resolution_x
@@ -24,11 +25,11 @@ class PopulationSimulator:
         self.Y = np.zeros(array_length)
 
     def Map(self, µ, x):
-        """The map x = µx(1 - x)"""
+        """ The map x = µx(1 - x)"""
         return µ * x * (1 - x)
 
     def Cycle(self):
-        """Cycles through the map for µ ∈ [0, 4] and x ∈ [0, 1],
+        """ Cycles through the map for µ ∈ [0, 4] and x ∈ [0, 1],
         and stores the values in X and Y"""
         index = 0
         for µ in np.arange(0, 4, self.resolution_mu):
@@ -38,7 +39,7 @@ class PopulationSimulator:
                 index += 1
 
     def plot(self):
-        """Plots the values of X and Y"""
+        """ Plots the values of X and Y"""
         pyplot.figure(dpi=480)
         pyplot.plot(self.X, self.Y, ".", markersize=1)
         pyplot.xlabel("x")
@@ -49,7 +50,7 @@ class PopulationSimulator:
         pyplot.show()
 
     def run(self):
-        """Runs the simulation"""
+        """ Runs the simulation"""
         self.Cycle()
         self.plot()
 
