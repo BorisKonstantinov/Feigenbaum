@@ -14,17 +14,6 @@ class PopulationSimulator:
     def Law(self, population, rate):
         return rate * population * (1 - population)
 
-    def max_value(self):
-        X = np.zeros(self.resolution)
-        Y = np.zeros(self.resolution)
-        population = self.population
-        rate = 3.999
-        for _ in range(2000):
-            population = self.Law(population, rate)
-        for i in range(self.resolution):
-            X[i] = population
-            Y[i] = population = self.Law(population, rate)
-        return X, Y
 
     def project(self):
         X = np.zeros(self.resolution)

@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 10 22:01:04 2020
+The Lyapunov exponent is a measure of divergence between two systems, f(x) and f(x + ∆x), 
+evolving from slightly different initial conditions.
 
-@author: 967869@swansea.ac.uk
+Found in Chapter 2.3 Sensitivity to initial conditions: The Lyapunov exponent
+
+This code has been modified in 2024 for the purposes of improving
+readability and functionality.
+Original version can be found in the appendix.
 """
 
 import math
@@ -30,27 +35,27 @@ class LyapunovCalculator:
         self.x = mp.Array("d", resolution)
         self.y = mp.Array("d", resolution)
 
-    def lyapunov(self, rate):
-        """Returns Lyapunov exponent for rate over N gen."""
-        function = 0.2
-        d_function = function + self.dx
-        sigma = 0
+    def lyapunov(self, µ):
+        """Returns Lyapunov exponent for rate µ over N gen."""
+        x = 0.2
+        dx = x + self.dx
+        Σ = 0
 
         for _ in range(self.N):
-            function = rate * function * (1 - function)
-            d_function = rate * d_function * (1 - d_function)
+            x = µ * x * (1 - x)
+            dx = µ * dx * (1 - dx)
 
-            diff = abs(d_function - function)
+            diff = abs(dx - x)
             if diff == 0:
                 break
 
-            sigma += math.log(diff / self.dx)
+            Σ += math.log(diff / self.dx)
 
-        sigma = sigma / self.N
-        return sigma
+        Σ = Σ / self.N
+        return Σ
 
     def loop(self, start, stop):
-        """Runs Lyapunov over a range of rates"""
+        """Runs Lyapunov over a range of µs"""
         for i in range(start, stop):
             self.x[i - self.start_range] = i / self.resolution
             self.y[i - self.start_range] = self.lyapunov(i / self.resolution)
@@ -74,8 +79,14 @@ class LyapunovCalculator:
         for p in processes:
             p.join()
 
+        """Plot the results"""
+        pyplot.figure(dpi=480)
+        pyplot.xlabel("Growth rate µ")
+        pyplot.ylabel("Lyapunov exponent λ")
+        pyplot.title("Lyapunov exponent for the logistic map")
+        pyplot.grid()
         pyplot.axhline(y=1)
-        pyplot.plot(self.x, self.y, linewidth=0.1)
+        pyplot.plot(self.x, self.y, linewidth=0.1, color="black")
         pyplot.show()
 
 
