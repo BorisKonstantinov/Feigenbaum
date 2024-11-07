@@ -42,7 +42,7 @@ def Cycle(r):
 
 def Scenario():
     global rate
-    for i in range(1, 2000):
+    for i in range(3998, 4000):
         Cycle(rate)
         rate = i / 1000
 

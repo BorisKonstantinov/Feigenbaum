@@ -57,7 +57,7 @@ class PopulationSimulator:
         pyplot.show()
 
     def run(self):
-        X, Y = self.max_value()
+        X, Y = self.project()
         self.plot(X, Y, ".", "x", "f(x)", "max_value experiments.py")
 
 
