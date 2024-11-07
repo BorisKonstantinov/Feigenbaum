@@ -9,6 +9,12 @@ accuracy.
 The other uses the decimal library to increase its precision, with the
 cost of computation time.
 This is also implemented in Fortran90 in the_direct_method.f90.
+
+Found in Chapter 3.1.3 Towards an understanding of chaos: Feigenbaum's number - The direct method
+
+This code has been modified in 2024 for the purposes of improving
+readability and functionality.
+Original version can be found in the appendix.
 """
 
 from decimal import Decimal, getcontext
