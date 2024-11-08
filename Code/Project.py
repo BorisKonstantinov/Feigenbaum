@@ -39,18 +39,19 @@ def Cycle(r):
         Y.append(Law(r))
     population = 0.2
 
-
 def Scenario():
     global rate
-    for i in range(3998, 4000):
+    for i in range(0, 4000):
         Cycle(rate)
         rate = i / 1000
-
 
 Scenario()
 
 # Create the plot
-pyplot.plot(X, Y, ".")
+pyplot.figure(dpi=480)
+pyplot.plot(X, Y, ".", markersize=0.01)
+pyplot.grid()
+pyplot.tight_layout()
 
 # Show the plot
 pyplot.show()
