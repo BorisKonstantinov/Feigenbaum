@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-The Lyapunov exponent is a measure of divergence between two systems, f(x) and f(x + ∆x), 
+The Lyapunov exponent is a measure of divergence between two systems, f(x) and f(x + ∆x),
 evolving from slightly different initial conditions.
 
 Found in Chapter 2.3 Sensitivity to initial conditions: The Lyapunov exponent

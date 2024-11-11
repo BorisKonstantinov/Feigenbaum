@@ -44,5 +44,6 @@ class PopulationSimulator:
         X, Y = self.project()
         self.plot(X, Y, ".", "x", "f(x)", "max_value experiments.py")
 
+
 simulator = PopulationSimulator()
 simulator.run()
