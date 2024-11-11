@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 The map x = µx(1 - x) can be seen to be stable between
 one or many population sizes up to a certain point close to 3.57,
@@ -42,7 +43,7 @@ class PopulationSimulator:
             # self.X[int(µ * (1 / self.resolution_mu)) : int(µ * (1 / self.resolution_mu) + self.member_count)] = µ
             population = self.population
             for _ in range(5000):
-                """Itterate to approach equilibrium."""
+                # Itterate to approach equilibrium
                 population = self.Map(µ, population)
             for _ in range(self.member_count):
                 population = self.Map(µ, population)
@@ -69,3 +70,4 @@ class PopulationSimulator:
 
 simulator = PopulationSimulator()
 simulator.run()
+
