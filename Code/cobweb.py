@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-bla
+The cobweb serves to illustrate the behaviour of the map as it iterates.
+Successive points can either be observed to converge to a fixed point, a
+periodic orbit, or exhibit chaotic behaviour.
 
-Found in Chapter 
+Found in Chapter 3 Towards an understanding of chaos: Cobwebs
 
 This code has been modified in 2024 for the purposes of improving
 readability and functionality.
@@ -16,12 +18,7 @@ from matplotlib import pyplot
 class CobwebSimulator:
     """Simulates the population growth using the cobweb plot method"""
 
-    def __init__(
-        self,
-        rate=4,
-        initial_population=0.2,
-        cobweb_size=320
-    ):
+    def __init__(self, rate=4, initial_population=0.2, cobweb_size=320):
         self.rate = rate
         self.population = initial_population
         self.array_length = int(cobweb_size)
@@ -40,7 +37,7 @@ class CobwebSimulator:
             # Initial iterations to stabilize the population
             for _ in range(1500):
                 population = self.Map(population, µ=self.rate)
-            
+
             # Generate cobweb plot data
             for i in range(2, self.array_length, 2):
                 self.X[i - 2] = population

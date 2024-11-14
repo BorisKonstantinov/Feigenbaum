@@ -70,4 +70,3 @@ class PopulationSimulator:
 
 simulator = PopulationSimulator()
 simulator.run()
-
